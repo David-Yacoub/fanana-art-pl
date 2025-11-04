@@ -2,20 +2,20 @@ import { Palette, Paintbrush2, Sparkles } from 'lucide-react';
 
 const featureHighlights = [
   {
-    title: 'Kameralne grupy (3–10 osób)',
-    copy: 'Pracujemy w małych grupach, aby każdy uczestnik otrzymał uważne wsparcie instruktora.',
+    title: 'Warsztaty decoupage',
+    copy: 'Oferujemy warsztaty grupowe w pracowni (3–10 osób) oraz warsztaty wyjazdowe (3–15 osób). Z nami spędzisz kreatywny czas w miłej atmosferze, przy kawie i ciastku.',
     image: '/images/hero-small-group.jpg',
     alt: 'Warsztaty dla dzieci i dorosłych'
   },
   {
     title: 'Materiały w cenie zajęć',
-    copy: 'Zapewniamy papiery, farby i wykończenia premium – Ty przychodzisz tylko z pomysłem.',
+    copy: 'Pracownia zapewnia wszystkie niezbędne materiały — farby, serwetki, papiery ryżowe, różne rodzaje lakierów, kleje do spękań oraz dodatki do ozdabiania. Wystarczy, że przyjdziesz i dasz się zainspirować!',
     image: '/images/hero-materials.jpg',
     alt: 'Profesjonalne materiały do decoupage'
   },
   {
     title: 'Wyjdziesz z dziełem, które pokochasz',
-    copy: 'Każdą sesję kończysz ukończonym projektem oraz wiedzą, jak powtórzyć efekt w domu.',
+    copy: 'Stwórz swoje własne dzieło i zabierz je do domu. Ozdób nim swoje wnętrze lub podaruj komuś bliskiemu w prezencie.',
     image: '/images/leave_with_the_art_you_love.jpg',
     alt: 'Dekoracyjna szkatułka wykonana podczas warsztatów'
   }
@@ -43,11 +43,16 @@ const Hero = ({ onCtaClick }) => (
 
       <div className="max-w-3xl space-y-6 rounded-3xl bg-white/85 p-6 shadow-lg backdrop-blur">
         <h1 className="font-display text-4xl leading-tight text-brand-ink sm:text-5xl lg:text-6xl">
-          Warsztaty decoupage i kreatywne, które celebrują radość rękodzieła.
+          Pracownia Fanana-Art
         </h1>
         <p className="max-w-xl text-lg leading-relaxed text-brand-ink/80 sm:text-xl">
-          Poznaj techniki pracy z papierem, fakturą i kolorem. Pod okiem instruktorki Fananah w Wiśle każda sesja łączy
-          solidną technikę, inspirację oraz ciepłą atmosferę studia.
+          Warsztaty decoupage – odkryj radość tworzenia rękami i sercem. Zapraszamy do świata, w którym papier, kolory i
+          faktury opowiadają historie.
+        </p>
+        <p className="max-w-xl text-lg leading-relaxed text-brand-ink/80 sm:text-xl">
+          Pod czułym okiem instruktorki każdy warsztat staje się podróżą przez technikę, inspirację i wspólne tworzenie.
+          W kameralnej, ciepłej atmosferze pracowni odkryjesz, jak z prostych materiałów powstają wyjątkowe dzieła – pełne
+          duszy, pasji i piękna.
         </p>
         <div className="flex flex-wrap gap-4">
           <button

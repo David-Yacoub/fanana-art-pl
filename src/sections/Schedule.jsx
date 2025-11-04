@@ -40,7 +40,7 @@ const buildBookingFormUrl = ({ title, date, time }) => {
 const scheduleWorkshops = [
   {
     id: 'earrings',
-    title: 'Warsztat drewnianych kolczyków',
+    title: 'Warsztaty z tworzenia kolczyków',
     description:
       'Stwórz trzy pary drewnianych kolczyków dopasowanych do Twojego stylu. Poznasz podstawy decoupage, dobierzesz wzory i wykończenia, a gotowe ozdoby zabierzesz ze sobą.',
     duration: '2 godziny',
@@ -53,7 +53,7 @@ const scheduleWorkshops = [
   },
   {
     id: 'candle',
-    title: 'Warsztat świeczników dekoracyjnych',
+    title: 'Warsztaty z tworzenia świeczników',
     description:
       'Wykonaj własny świecznik, który rozświetli długie wieczory. Na spokojnie przejdziesz każdy etap – od przygotowania powierzchni po końcowe zdobienia i zabezpieczenie.',
     duration: '2 godziny',
@@ -96,7 +96,7 @@ const Schedule = () => {
           <div className="max-w-3xl space-y-3">
             <h2 className="font-display text-3xl text-brand-ink sm:text-4xl">Harmonogram warsztatów i rezerwacje</h2>
             <p className="text-sm leading-relaxed text-brand-ink/70">
-              Zobacz nadchodzące spotkania, dodaj je do kalendarza i zarezerwuj termin dla swojej grupy w kilka chwil.
+              Zobacz nadchodzące spotkania, dodaj je do kalendarza i zarezerwuj termin dla siebie lub swojej grupy w kilka chwil.
             </p>
           </div>
           <button

@@ -18,19 +18,19 @@ const TopNav = () => {
       : true;
 
   return (
-    <nav className="sticky top-0 z-50 border-b border-brand-ink/10 bg-white/80 backdrop-blur">
-      <div className="bg-white/95">
-        <div className="mx-auto flex max-w-6xl items-center justify-end gap-2 px-4 py-2 text-xs font-semibold uppercase tracking-wide text-brand-ink sm:text-sm sm:px-10 lg:px-12">
+    <nav className="sticky top-0 z-50 bg-white shadow-sm">
+      <div className="border-b border-brand-ink/10 bg-white/80 backdrop-blur">
+        <div className="mx-auto flex max-w-6xl items-center justify-end gap-2 px-4 py-1.5 text-[11px] font-semibold uppercase tracking-[0.35em] text-brand-ink sm:text-xs sm:px-10 lg:px-12">
           {languageOptions.map((option) => {
             const isActive = option.label === 'EN' ? isEnglishActive : !isEnglishActive;
             return (
               <a
                 key={option.label}
                 href={option.href}
-                className={`rounded-full px-4 py-1 transition ${
+                className={`rounded-full px-3 py-1 transition ${
                   isActive
                     ? 'bg-brand-forest text-white'
-                    : 'bg-white text-brand-ink hover:bg-brand-forest/10 hover:text-brand-forest'
+                    : 'bg-transparent text-brand-ink hover:bg-brand-forest/10 hover:text-brand-forest'
                 }`}
                 aria-current={isActive ? 'page' : undefined}
                 rel="noreferrer"
@@ -41,18 +41,72 @@ const TopNav = () => {
           })}
         </div>
       </div>
-      <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-center gap-2 px-4 py-3 sm:flex-nowrap sm:gap-3 sm:px-10 lg:px-12">
-        {navItems.map((item) => (
+
+      <div className="border-b border-brand-forest/15 bg-brand-forest/5">
+        <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-center gap-3 px-4 py-2 text-xs font-medium text-brand-forest sm:text-sm sm:px-10 lg:px-12">
           <a
-            key={item.label}
-            href={item.href}
-            target={item.external ? '_blank' : undefined}
-            rel={item.external ? 'noreferrer' : undefined}
-            className="flex-1 rounded-full border border-brand-forest/20 px-4 py-2 text-center text-sm font-semibold uppercase tracking-wide text-brand-forest transition hover:bg-brand-forest hover:text-white sm:flex-none sm:px-5"
+            href="https://chat.whatsapp.com/IEiJEn6IXhfLWkDMYJxvOL?mode=wwt"
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center gap-2 rounded-full border border-brand-forest/20 bg-white px-3 py-1 transition hover:border-brand-forest hover:text-brand-forest"
           >
-            {item.label}
+            Dołącz do naszej grupy WhatsApp
           </a>
-        ))}
+          <span className="inline-flex items-center gap-2 rounded-full bg-brand-forest/10 px-3 py-1">
+            Organizujemy warsztaty wyjazdowe dla firm, szkół i wydarzeń
+          </span>
+        </div>
+      </div>
+
+      <div className="bg-white/90 backdrop-blur">
+        <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-10 lg:px-12">
+          <a
+            href="#hero"
+            className="flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.4em] text-brand-forest"
+          >
+            Fanana-Art
+          </a>
+          <div className="hidden items-center gap-6 md:flex">
+            {navItems.map((item) => (
+              <a
+                key={item.label}
+                href={item.href}
+                target={item.external ? '_blank' : undefined}
+                rel={item.external ? 'noreferrer' : undefined}
+                className="text-sm font-medium text-brand-ink/70 transition hover:text-brand-forest"
+              >
+                {item.label}
+              </a>
+            ))}
+          </div>
+          <a
+            href="#contact"
+            className="hidden items-center gap-2 rounded-full border border-brand-forest/15 bg-brand-forest px-5 py-2 text-sm font-semibold uppercase tracking-wide text-white shadow transition hover:bg-brand-forest/90 md:inline-flex"
+          >
+            Skontaktuj się
+          </a>
+        </div>
+        <div className="flex flex-wrap items-center justify-between gap-3 border-t border-brand-forest/10 px-4 py-3 md:hidden">
+          <div className="flex flex-wrap gap-3">
+            {navItems.map((item) => (
+              <a
+                key={item.label}
+                href={item.href}
+                target={item.external ? '_blank' : undefined}
+                rel={item.external ? 'noreferrer' : undefined}
+                className="rounded-full border border-brand-forest/15 px-3 py-1.5 text-xs font-semibold uppercase tracking-wide text-brand-forest transition hover:bg-brand-forest hover:text-white"
+              >
+                {item.label}
+              </a>
+            ))}
+          </div>
+          <a
+            href="#contact"
+            className="rounded-full border border-brand-forest/15 px-3 py-1.5 text-xs font-semibold uppercase tracking-wide text-brand-forest transition hover:bg-brand-forest hover:text-white"
+          >
+            Kontakt
+          </a>
+        </div>
       </div>
     </nav>
   );
