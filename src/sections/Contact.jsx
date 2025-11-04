@@ -59,11 +59,11 @@ const Contact = forwardRef(({ workshops, selectedWorkshop }, ref) => {
 
             <div className="grid gap-4 sm:grid-cols-2">
               <a
-                href="tel:+48501234567"
+                href="tel:+48881937943"
                 className="flex items-center gap-3 rounded-3xl border border-brand-forest/10 bg-brand-cream/70 px-4 py-3 text-sm font-medium text-brand-forest transition hover:border-brand-forest/40"
               >
                 <Phone className="h-5 w-5" />
-                +48 501 234 567
+                +48 881 937 943
               </a>
               <a
                 href="mailto:hello@fanana-art.com"
@@ -77,7 +77,7 @@ const Contact = forwardRef(({ workshops, selectedWorkshop }, ref) => {
                 Pracownia Fanana-Art, Wisła
               </div>
               <a
-                href="https://chat.whatsapp.com/FananaArtCommunity"
+                href="https://chat.whatsapp.com/IEiJEn6IXhfLWkDMYJxvOL?mode=wwt"
                 className="flex items-center gap-3 rounded-3xl border border-brand-forest/10 bg-brand-cream/70 px-4 py-3 text-sm font-medium text-brand-forest transition hover:border-brand-forest/40"
                 target="_blank"
                 rel="noreferrer"
