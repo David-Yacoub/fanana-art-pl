@@ -16,7 +16,7 @@ const featureHighlights = [
   {
     title: 'Leave with art you love',
     copy: 'Finish every session with a completed piece plus the know-how to recreate it at home.',
-    image: '/images/gallery-floral-box.jpg',
+    image: '/images/leave_with_the_art_you_love.jpg',
     alt: 'Dekoracyjna szkatułka wykonana podczas warsztatów'
   }
 ];
