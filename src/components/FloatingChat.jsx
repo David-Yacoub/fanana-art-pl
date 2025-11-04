@@ -6,19 +6,17 @@ const WhatsappIcon = ({ className }) => (
 );
 
 const FloatingChat = () => (
-  <div className="fixed bottom-6 right-6 z-50 rounded-full bg-black/85 p-1.5 shadow-2xl backdrop-blur-sm transition hover:bg-black">
-    <a
-      href="https://chat.whatsapp.com/IEiJEn6IXhfLWkDMYJxvOL?mode=wwt"
-      target="_blank"
-      rel="noreferrer"
-      className="flex items-center gap-2 rounded-full border border-transparent px-4 py-3 text-sm font-semibold uppercase tracking-wide text-white transition"
-      style={{ backgroundColor: '#25D366' }}
-      aria-label="Dołącz do grupy WhatsApp Fanana-Art"
-    >
-      <WhatsappIcon className="h-5 w-5" />
-      <span className="hidden sm:inline">Dołącz do grupy</span>
-    </a>
-  </div>
+  <a
+    href="https://chat.whatsapp.com/IEiJEn6IXhfLWkDMYJxvOL?mode=wwt"
+    target="_blank"
+    rel="noreferrer"
+    className="fixed bottom-6 right-6 z-50 flex items-center gap-2 rounded-full border border-transparent px-5 py-3 text-sm font-semibold uppercase tracking-wide text-white shadow-2xl transition hover:brightness-95"
+    style={{ backgroundColor: '#25D366' }}
+    aria-label="Dołącz do grupy WhatsApp Fanana-Art"
+  >
+    <WhatsappIcon className="h-5 w-5" />
+    <span className="hidden sm:inline">Dołącz do grupy</span>
+  </a>
 );
 
 export default FloatingChat;
