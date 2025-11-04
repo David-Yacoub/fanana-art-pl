@@ -43,7 +43,8 @@ export const workshops = [
     image: '/images/candle_workshop.jpg',
     ctaLabel: 'Reserve a date',
     ctaDisabledLabel: 'Reserve a date',
-    bookingUrl: 'https://docs.google.com/forms/d/e/1FAIpQLSfiqikccQwYxGbdG8LOCpKB9KzWIriDWBS8vajRFQKSv-kmTg/viewform',
+    bookingUrl:
+      'https://docs.google.com/forms/d/e/1FAIpQLSfnOY2G0RlzpVuwQD9f5NMZnt6WJUMKkFHqTVcse1M4rjZAbQ/viewform',
     dateTimes: [
       {
         date: null,

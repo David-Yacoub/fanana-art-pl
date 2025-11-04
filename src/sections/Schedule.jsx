@@ -2,11 +2,12 @@ import { useMemo, useState } from 'react';
 import { CalendarDays, Clock3, Sparkles, Wallet } from 'lucide-react';
 
 const BOOKING_CONFIG = {
-  formBaseUrl: 'https://docs.google.com/forms/d/e/1FAIpQLSfiqikccQwYxGbdG8LOCpKB9KzWIriDWBS8vajRFQKSv-kmTg/viewform',
+  formBaseUrl:
+    'https://docs.google.com/forms/d/e/1FAIpQLSfnOY2G0RlzpVuwQD9f5NMZnt6WJUMKkFHqTVcse1M4rjZAbQ/viewform',
   entryIds: {
-    workshop: 'entry.1808126251',
-    date: 'entry.1207079226',
-    time: 'entry.1977225055'
+    workshop: 'entry.245361249',
+    date: 'entry.372576101',
+    time: 'entry.1825110953'
   }
 };
 
