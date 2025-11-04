@@ -2,9 +2,9 @@ export const announcements = [
   {
     id: 'birthday-special',
     type: 'offer',
-    title: 'Urodzinowy pakiet warsztatowy',
+    title: 'Urodzinowe warsztaty',
     description:
-      'Zorganizuj prywatne świętowanie z decoupage. Przy grupie liczącej pięć lub więcej osób całe spotkanie obejmuje 20% rabatu.',
+      'Świętuj swoje lub bliskich urodziny w kreatywny sposób! Zaproś znajomych na wyjątkowe warsztaty, pełne inspiracji i wspólnej zabawy przy tworzeniu pięknych dekoracji. Przy udziale pięciu lub więcej osób, cała grupa otrzymuje 20% zniżki na koszt warsztatów.',
     note: 'Minimum 5 osób, rabat 20%',
     ctaLabel: 'Zaplanuj urodzinowe warsztaty',
     ctaHref: '#contact',
@@ -14,9 +14,9 @@ export const announcements = [
   {
     id: 'education-offers',
     type: 'offer',
-    title: 'Warsztaty dla przedszkoli i szkół',
+    title: 'Warsztaty dla dzieci',
     description:
-      'Wprowadź decoupage do sali lekcyjnej dzięki mobilnym warsztatom dla młodych twórców. Zapewniamy materiały, scenariusze zajęć i projekty do zabrania do domu.',
+      'Rozbudź kreatywność dzieci podczas warsztatów stworzonych z myślą o młodych twórcach! Zajęcia pozwolą im postawić pierwsze kroki w świecie decoupage – sztuki zdobienia, która rozwija wyobraźnię i zdolności manualne. Zapewniamy wszystkie materiały, inspirujący instruktaż krok po kroku oraz proste projekty, które uczestnicy zabiorą ze sobą do domu. Warsztaty z dojazdem do szkoły lub przedszkola prowadzone są w kameralnych grupach – maksymalnie 15 osób – co gwarantuje indywidualne wsparcie i twórczą, przyjazną atmosferę.',
     note: 'Elastyczne terminy w placówkach',
     ctaLabel: 'Zamów wizytę w szkole',
     ctaHref: '#contact',
@@ -28,7 +28,7 @@ export const announcements = [
     type: 'info',
     title: 'Kreatywne spotkanie na Dzień Kobiet',
     description:
-      'Zaproś minimum pięć kobiet ze swojego zespołu lub rodziny na tematyczne warsztaty w naszej pracowni – przygotujemy zajęcia pod Wasz pomysł.',
+      'Zaproś co najmniej trzy kobiety (max. 10) ze swojego zespołu lub rodziny na kreatywne spotkanie w naszej pracowni. To wyjątkowy czas, by wspólnie odpocząć, porozmawiać i stworzyć coś pięknego.',
     note: 'Rezerwacje na marzec otwarte',
     ctaLabel: 'Zarezerwuj miejsca',
     ctaHref: '#contact',
@@ -40,7 +40,7 @@ export const announcements = [
     type: 'info',
     title: 'Podaruj kreatywny voucher',
     description:
-      'Spraw bliskiej osobie indywidualne warsztaty decoupage dopasowane do jej czasu i zainteresowań.',
+      'Podaruj komuś wyjątkowy prezent – voucher na warsztaty decoupage, który można wykorzystać podczas zajęć grupowych w naszej pracowni (w zgłoszeniu wystarczy podać numer vouchera) lub – po wcześniejszym uzgodnieniu – na warsztaty indywidualne. Jeśli chcesz otrzymać voucher w formie papierowej, skontaktuj się z nami – wyślemy go na Twój adres domowy na koszt Fanana-Art.',
     note: 'Spersonalizowane spotkanie 1:1',
     ctaLabel: 'Kup voucher',
     ctaHref: '#contact',

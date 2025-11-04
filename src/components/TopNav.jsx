@@ -19,40 +19,29 @@ const TopNav = () => {
 
   return (
     <nav className="sticky top-0 z-50 bg-white shadow-sm">
-      <div className="border-b border-brand-ink/10 bg-white/80 backdrop-blur">
-        <div className="mx-auto flex max-w-6xl items-center justify-end gap-2 px-4 py-1.5 text-[11px] font-semibold uppercase tracking-[0.35em] text-brand-ink sm:text-xs sm:px-10 lg:px-12">
-          {languageOptions.map((option) => {
-            const isActive = option.label === 'EN' ? isEnglishActive : !isEnglishActive;
-            return (
-              <a
-                key={option.label}
-                href={option.href}
-                className={`rounded-full px-3 py-1 transition ${
-                  isActive
-                    ? 'bg-brand-forest text-white'
-                    : 'bg-transparent text-brand-ink hover:bg-brand-forest/10 hover:text-brand-forest'
-                }`}
-                aria-current={isActive ? 'page' : undefined}
-                rel="noreferrer"
-              >
-                {option.label}
-              </a>
-            );
-          })}
-        </div>
-      </div>
-
-      <div className="border-b border-brand-forest/15 bg-brand-forest/5">
-        <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-center gap-3 px-4 py-2 text-xs font-medium text-brand-forest sm:text-sm sm:px-10 lg:px-12">
-          <a
-            href="https://chat.whatsapp.com/IEiJEn6IXhfLWkDMYJxvOL?mode=wwt"
-            target="_blank"
-            rel="noreferrer"
-            className="inline-flex items-center gap-2 rounded-full border border-brand-forest/20 bg-white px-3 py-1 transition hover:border-brand-forest hover:text-brand-forest"
-          >
-            Dołącz do naszej grupy WhatsApp
-          </a>
-          <span className="inline-flex items-center gap-2 rounded-full bg-brand-forest/10 px-3 py-1">
+      <div className="border-b border-brand-ink/10 bg-white">
+        <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-3 px-4 py-2 text-xs font-semibold tracking-[0.15em] text-brand-forest sm:text-sm sm:px-10 lg:px-12">
+          <div className="flex items-center gap-2">
+            {languageOptions.map((option) => {
+              const isActive = option.label === 'EN' ? isEnglishActive : !isEnglishActive;
+              return (
+                <a
+                  key={option.label}
+                  href={option.href}
+                  className={`rounded-full px-3 py-1 transition ${
+                    isActive
+                      ? 'bg-brand-forest text-white'
+                      : 'bg-transparent text-brand-ink hover:bg-brand-forest/10 hover:text-brand-forest'
+                  }`}
+                  aria-current={isActive ? 'page' : undefined}
+                  rel="noreferrer"
+                >
+                  {option.label}
+                </a>
+              );
+            })}
+          </div>
+          <span className="rounded-full bg-brand-forest/10 px-3 py-1 text-[11px] tracking-normal text-brand-forest sm:text-xs">
             Organizujemy warsztaty wyjazdowe dla firm, szkół i wydarzeń
           </span>
         </div>
@@ -79,13 +68,9 @@ const TopNav = () => {
               </a>
             ))}
           </div>
-          <a
-            href="#contact"
-            className="hidden items-center gap-2 rounded-full border border-brand-forest/15 bg-brand-forest px-5 py-2 text-sm font-semibold uppercase tracking-wide text-white shadow transition hover:bg-brand-forest/90 md:inline-flex"
-          >
-            Skontaktuj się
-          </a>
+          <div className="hidden md:block" aria-hidden="true" />
         </div>
+
         <div className="flex flex-wrap items-center justify-between gap-3 border-t border-brand-forest/10 px-4 py-3 md:hidden">
           <div className="flex flex-wrap gap-3">
             {navItems.map((item) => (
