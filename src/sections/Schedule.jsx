@@ -101,10 +101,11 @@ const Schedule = () => {
           <button
             type="button"
             onClick={() => setShowCalendar((prev) => !prev)}
-            className="inline-flex items-center gap-2 rounded-full border border-brand-forest/20 bg-white/70 px-5 py-2 text-xs font-semibold uppercase tracking-wide text-brand-forest transition hover:bg-brand-forest hover:text-white"
+            className="inline-flex items-center gap-2 rounded-full bg-brand-forest px-6 py-2.5 text-xs font-semibold uppercase tracking-wide text-white shadow-md transition hover:bg-brand-forest/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-forest/50 focus-visible:ring-offset-2 focus-visible:ring-offset-brand-cream"
             aria-expanded={showCalendar}
           >
-            {showCalendar ? 'Hide calendar' : 'Show calendar'}
+            <CalendarDays className="h-4 w-4 text-white" aria-hidden="true" />
+            <span>{showCalendar ? 'Hide calendar view' : 'Show calendar view'}</span>
           </button>
         </div>
 
