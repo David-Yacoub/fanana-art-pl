@@ -47,7 +47,8 @@ const scheduleWorkshops = [
     formDate: '2025-11-20',
     formTime: '17:30',
     timeRange: '17:30-19:30',
-    highlight: 'For the beginners'
+    highlight: 'For the beginners',
+    image: '/images/Earings_workshop.jpg'
   },
   {
     id: 'candle',
@@ -59,7 +60,8 @@ const scheduleWorkshops = [
     formDate: '2025-11-30',
     formTime: '17:30',
     timeRange: '17:30-19:30',
-    highlight: null
+    highlight: null,
+    image: '/images/candle_workshop.jpg'
   }
 ];
 
@@ -131,7 +133,7 @@ const Schedule = () => {
 
           {upcomingSessions.length > 0 ? (
             <div className="grid gap-6 md:grid-cols-2">
-              {upcomingSessions.map(({ id, highlight, title, description, duration, priceDisplay, timeRange, formDate, formTime, longDate }) => {
+              {upcomingSessions.map(({ id, highlight, title, description, duration, priceDisplay, timeRange, formDate, formTime, longDate, image }) => {
                 const bookingUrl = buildBookingFormUrl({
                   title,
                   date: formDate,
@@ -141,60 +143,74 @@ const Schedule = () => {
                 return (
                   <article
                     key={id}
-                    className="group flex h-full flex-col justify-between rounded-3xl border border-brand-ink/10 bg-white/90 p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-lg"
+                    className="group flex h-full flex-col overflow-hidden rounded-3xl border border-brand-ink/10 bg-white/90 shadow-sm transition hover:-translate-y-1 hover:shadow-lg"
                   >
-                    <div className="space-y-3">
-                      <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wide text-brand-forest">
-                        {highlight && (
-                          <span className="inline-flex items-center gap-1 rounded-full bg-brand-forest/10 px-3 py-1">
-                            <Sparkles className="h-3.5 w-3.5" />
-                            {highlight}
+                    {image && (
+                      <div className="relative h-48">
+                        <img
+                          src={image}
+                          alt={title}
+                          className="h-full w-full object-cover"
+                          loading="lazy"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-brand-ink/40 via-transparent to-transparent" />
+                      </div>
+                    )}
+
+                    <div className="flex flex-1 flex-col justify-between p-6">
+                      <div className="space-y-3">
+                        <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wide text-brand-forest">
+                          {highlight && (
+                            <span className="inline-flex items-center gap-1 rounded-full bg-brand-forest/10 px-3 py-1">
+                              <Sparkles className="h-3.5 w-3.5" />
+                              {highlight}
+                            </span>
+                          )}
+                          <span className="inline-flex items-center gap-1 rounded-full border border-brand-forest/15 px-3 py-1 text-brand-forest/80">
+                            Creative workshop
                           </span>
-                        )}
-                        <span className="inline-flex items-center gap-1 rounded-full border border-brand-forest/15 px-3 py-1 text-brand-forest/80">
-                          Creative workshop
-                        </span>
+                        </div>
+                        <h4 className="font-display text-xl text-brand-ink group-hover:text-brand-forest">
+                          {title}
+                        </h4>
+                        <p className="text-sm leading-relaxed text-brand-ink/70">{description}</p>
                       </div>
-                      <h4 className="font-display text-xl text-brand-ink group-hover:text-brand-forest">
-                        {title}
-                      </h4>
-                      <p className="text-sm leading-relaxed text-brand-ink/70">{description}</p>
+
+                      <dl className="mt-4 space-y-2 text-sm text-brand-ink/75">
+                        <div className="flex items-center gap-2">
+                          <CalendarDays className="h-4 w-4 text-brand-forest" />
+                          <div>
+                            <dt className="sr-only">Date</dt>
+                            <dd>{longDate}</dd>
+                          </div>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <Clock3 className="h-4 w-4 text-brand-forest" />
+                          <div>
+                            <dt className="sr-only">Time</dt>
+                            <dd>
+                              {timeRange} &middot; {duration}
+                            </dd>
+                          </div>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <Wallet className="h-4 w-4 text-brand-forest" />
+                          <div>
+                            <dt className="sr-only">Investment</dt>
+                            <dd>{priceDisplay}</dd>
+                          </div>
+                        </div>
+                      </dl>
+
+                      <a
+                        href={bookingUrl}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="mt-6 inline-flex items-center justify-center gap-2 rounded-full bg-brand-forest px-5 py-3 text-sm font-semibold uppercase tracking-wide text-white shadow transition hover:bg-brand-forest/90"
+                      >
+                        Book this workshop
+                      </a>
                     </div>
-
-                    <dl className="mt-4 space-y-2 text-sm text-brand-ink/75">
-                      <div className="flex items-center gap-2">
-                        <CalendarDays className="h-4 w-4 text-brand-forest" />
-                        <div>
-                          <dt className="sr-only">Date</dt>
-                          <dd>{longDate}</dd>
-                        </div>
-                      </div>
-                      <div className="flex items-center gap-2">
-                        <Clock3 className="h-4 w-4 text-brand-forest" />
-                        <div>
-                          <dt className="sr-only">Time</dt>
-                          <dd>
-                            {timeRange} &middot; {duration}
-                          </dd>
-                        </div>
-                      </div>
-                      <div className="flex items-center gap-2">
-                        <Wallet className="h-4 w-4 text-brand-forest" />
-                        <div>
-                          <dt className="sr-only">Investment</dt>
-                          <dd>{priceDisplay}</dd>
-                        </div>
-                      </div>
-                    </dl>
-
-                    <a
-                      href={bookingUrl}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="mt-6 inline-flex items-center justify-center gap-2 rounded-full bg-brand-forest px-5 py-3 text-sm font-semibold uppercase tracking-wide text-white shadow transition hover:bg-brand-forest/90"
-                    >
-                      Book this workshop
-                    </a>
                   </article>
                 );
               })}
