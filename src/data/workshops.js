@@ -1,181 +1,172 @@
-export const workshopTypes = [
-  'Decoupage',
-  'Mixed Media',
-  'Seasonal Series',
-  'Family Friendly',
-  'Custom'
-];
+export const workshopTypes = ['Decoupage', 'Mixed media', 'Cykl sezonowy', 'Rodzinne', 'Na zamówienie'];
 
 export const workshops = [
   {
     id: 'earrings-workshop',
-    title: 'Earrings Workshop',
+    title: 'Warsztat drewnianych kolczyków',
     description:
-      'Create your own unique wooden earrings that will complement any outfit and express your personal style.',
-    duration: '2 hours',
+      'Stwórz trzy pary lekkich, drewnianych kolczyków dopasowanych do Twojego stylu. Poznasz podstawy decoupage, dobierzesz wzory oraz wykończenia i zabierzesz ze sobą gotowe ozdoby.',
+    duration: '2 godziny',
     price: 65,
-    priceDisplay: '65 PLN / 3 pairs of earrings',
-    difficulty: 'Beginner',
+    priceDisplay: '65 zł / 3 pary kolczyków',
+    difficulty: 'Początkujący',
     type: 'Decoupage',
-    highlight: 'For the beginners',
+    highlight: 'Dla początkujących',
     image: '/images/Earings_workshop.jpg',
-    ctaLabel: 'Reserve a date',
-    ctaDisabledLabel: 'Reserve a date',
+    ctaLabel: 'Zarezerwuj termin',
+    ctaDisabledLabel: 'Zarezerwuj termin',
     dateTimes: [
       {
         date: '2025-11-19',
         time: '17:30',
-        display: 'November 19, 2025 - 17:30-19:30'
+        display: '19 listopada 2025 · 17:30–19:30'
       }
     ]
   },
   {
     id: 'candle-holder-workshop',
-    title: 'Candle Holder Workshop',
+    title: 'Warsztat świeczników dekoracyjnych',
     description:
-      "Design your own candle holder that will brighten long winter evenings and add a cozy glow to your home. It's a perfect way to slow down, relax, and create something beautiful -- for yourself or as a gift.",
-    duration: '2 hours',
+      'Zaprojektuj świecznik, który rozświetli długie wieczory i doda przytulnego blasku Twojemu wnętrzu. Zajęcia prowadzone są spokojnym tempem, z naciskiem na relaks i twórczą zabawę.',
+    duration: '2 godziny',
     price: 0,
-    priceDisplay: 'To be confirmed',
-    difficulty: 'Beginner',
+    priceDisplay: 'Do potwierdzenia',
+    difficulty: 'Początkujący',
     type: 'Decoupage',
-    highlight: 'Reserve a Date',
+    highlight: 'Zarezerwuj termin',
     image: '/images/candle_workshop.jpg',
-    ctaLabel: 'Reserve a date',
-    ctaDisabledLabel: 'Reserve a date',
+    ctaLabel: 'Zarezerwuj termin',
+    ctaDisabledLabel: 'Zarezerwuj termin',
     bookingUrl:
       'https://docs.google.com/forms/d/e/1FAIpQLSfnOY2G0RlzpVuwQD9f5NMZnt6WJUMKkFHqTVcse1M4rjZAbQ/viewform',
     dateTimes: [
       {
         date: null,
         time: null,
-        display: '[to be confirmed]'
+        display: 'Termin do potwierdzenia'
       }
     ]
   },
   {
     id: 'mixed-media-canvas',
-    title: 'Mixed Media Canvas',
+    title: 'Płótno mixed media',
     description:
-      'Experiment with decoupage, acrylics, and texture paste to craft a layered art canvas filled with personality.',
-    duration: '4 hours',
+      'Eksperymentuj z decoupage, akrylami i pastami strukturalnymi, aby stworzyć warstwowy obraz pełen charakteru i głębi.',
+    duration: '4 godziny',
     price: 85,
-    difficulty: 'Advanced',
-    type: 'Mixed Media',
-    highlight: 'Stretch Your Creative Muscles',
+    difficulty: 'Zaawansowany',
+    type: 'Mixed media',
+    highlight: 'Rozwiń umiejętności',
     image:
       'https://images.unsplash.com/photo-1482160549825-59d1b23cb208?auto=format&fit=crop&w=900&q=60',
     dateTimes: [
-      { date: '2025-01-12', time: '9:30 AM' },
-      { date: '2025-02-16', time: '1:00 PM' }
+      { date: '2025-01-12', time: '09:30' },
+      { date: '2025-02-16', time: '13:00' }
     ]
   },
   {
     id: 'spring-florals-series',
-    title: 'Spring Florals Series',
+    title: 'Wiosenny cykl kwiatowy',
     description:
-      'A three-part journey exploring floral decoupage motifs for vases, trays, and wall art.',
-    duration: '3 x 2 hours',
+      'Trzy spotkania poświęcone florystycznym motywom na wazonach, tacach i dekoracjach ściennych. Idealne, by rozwinąć swój styl i zestaw technik.',
+    duration: '3 × 2 godziny',
     price: 150,
-    difficulty: 'Intermediate',
-    type: 'Seasonal Series',
-    highlight: 'New for the Season',
+    difficulty: 'Średnio zaawansowany',
+    type: 'Cykl sezonowy',
+    highlight: 'Nowość sezonu',
     image:
       'https://images.unsplash.com/photo-1526481280695-3c4696e38ce7?auto=format&fit=crop&w=900&q=60',
     dateTimes: [
-      { date: '2025-03-01', time: '10:00 AM' },
-      { date: '2025-03-08', time: '10:00 AM' },
-      { date: '2025-03-15', time: '10:00 AM' }
+      { date: '2025-03-01', time: '10:00' },
+      { date: '2025-03-08', time: '10:00' },
+      { date: '2025-03-15', time: '10:00' }
     ]
   },
   {
     id: 'family-collage-workshop',
-    title: 'Family Collage Workshop',
+    title: 'Rodzinny warsztat kolażu',
     description:
-      'A playful family-friendly session crafting memory boards using decoupage techniques and storytelling prompts.',
-    duration: '90 minutes',
+      'Swobodne, rodzinne spotkanie z tworzeniem tablic wspomnień za pomocą decoupage i opowieści. Doskonałe dla dużych i małych artystów.',
+    duration: '90 minut',
     price: 35,
-    difficulty: 'Beginner',
-    type: 'Family Friendly',
-    highlight: 'Bring the Kids!',
+    difficulty: 'Początkujący',
+    type: 'Rodzinne',
+    highlight: 'Dla całej rodziny',
     image:
       'https://images.unsplash.com/photo-1505744764255-45302db3c6b7?auto=format&fit=crop&w=900&q=60',
     dateTimes: [
-      { date: '2024-12-28', time: '4:00 PM' },
-      { date: '2025-01-25', time: '11:30 AM' }
+      { date: '2024-12-28', time: '16:00' },
+      { date: '2025-01-25', time: '11:30' }
     ]
   },
   {
     id: 'christmas-workshops-children',
-    title: 'Christmas Workshops for Children',
+    title: 'Świąteczne warsztaty dla dzieci',
     description:
-      'Christmas workshops for children are a magical opportunity to create beautiful holiday decorations. The sessions spark creativity, bring festive joy, and let kids decorate their homes with their own handmade works of art.',
-    duration: '45-60 minutes',
+      'Magiczne zajęcia, podczas których dzieci tworzą dekoracje świąteczne. Warsztaty rozwijają kreatywność, sprawiają radość i pozwalają zabrać do domu własnoręcznie wykonane ozdoby.',
+    duration: '45–60 minut',
     price: 25,
-    priceDisplay: '20-25 PLN',
+    priceDisplay: '20–25 zł',
     pricingDetails: [
-      '25 PLN - Decoupage on birch slices',
-      '20 PLN - Decoupage on hanging wooden boards'
+      '25 zł – decoupage na krążkach brzozy',
+      '20 zł – decoupage na zawieszkach drewnianych'
     ],
-    difficulty: 'Beginner',
-    type: 'Family Friendly',
-    highlight: 'Reserve a Date',
+    difficulty: 'Początkujący',
+    type: 'Rodzinne',
+    highlight: 'Świąteczna edycja',
     image: '/images/gallery-love-beyond-words.jpg',
-    ctaLabel: 'Reserve a date',
-    ctaDisabledLabel: 'Reserve a date',
-    dateTimes: [{ date: 'Date to be arranged', time: 'To be arranged' }]
+    ctaLabel: 'Zarezerwuj termin',
+    ctaDisabledLabel: 'Zarezerwuj termin',
+    dateTimes: [{ date: 'Do ustalenia', time: 'Do ustalenia', display: 'Termin do uzgodnienia' }]
   },
   {
     id: 'wooden-clock-workshop',
-    title: 'Wooden Clock Workshop',
+    title: 'Warsztat drewnianych zegarów',
     description:
-      'Join a creative session where participants decorate a wooden clock using the decoupage technique - combining art, relaxation, and personal style. No experience is needed! We provide all materials, inspiration, and step-by-step guidance. Each participant will take home a functional work of art they designed themselves. Sessions are held in small groups (3-10 people) to ensure a relaxed, creative atmosphere and individual support.',
-    duration: '2 hours',
+      'Stwórz funkcjonalny zegar z drewnianej bazy, łącząc sztukę, relaks i własny styl. Nie potrzebujesz doświadczenia – zapewniamy materiały i wsparcie krok po kroku.',
+    duration: '2 godziny',
     price: 90,
-    priceDisplay: '90 PLN',
-    pricingDetails: ['Indicate group size (3-10 people) when booking'],
-    difficulty: 'Beginner',
+    priceDisplay: '90 zł',
+    pricingDetails: ['Przy rezerwacji podaj liczbę osób (3–10)'],
+    difficulty: 'Początkujący',
     type: 'Decoupage',
-    highlight: 'Small Groups 3-10',
+    highlight: 'Małe grupy 3–10',
     image: '/images/gallery-rose-clock.jpg',
-    ctaLabel: 'Reserve a date',
-    ctaDisabledLabel: 'Reserve a date',
-    dateTimes: [{ date: 'Date to be arranged', time: 'To be arranged' }]
+    ctaLabel: 'Zarezerwuj termin',
+    ctaDisabledLabel: 'Zarezerwuj termin',
+    dateTimes: [{ date: 'Do ustalenia', time: 'Do ustalenia', display: 'Termin do uzgodnienia' }]
   },
   {
     id: 'tea-box-workshop',
-    title: 'Tea Box Workshop',
+    title: 'Warsztat herbacianych szkatułek',
     description:
-      'Join a special workshop where you will decorate a wooden tea box using the decoupage technique - creating a beautiful and useful item that will brighten your kitchen or become a thoughtful handmade gift. No artistic skills are required - all materials, designs, and step-by-step instructions are provided.',
-    duration: '2 hours',
+      'Ozdób drewnianą szkatułkę na herbaty techniką decoupage – powstanie piękny i praktyczny dodatek do kuchni lub prezent od serca.',
+    duration: '2 godziny',
     price: 70,
-    priceDisplay: '70-80 PLN',
-    pricingDetails: [
-      '70 PLN - Box with 4 compartments',
-      '80 PLN - Box with 6 compartments'
-    ],
-    difficulty: 'Beginner',
-    type: 'Family Friendly',
-    highlight: 'Reserve a Date',
+    priceDisplay: '70–80 zł',
+    pricingDetails: ['70 zł – pudełko z 4 przegródkami', '80 zł – pudełko z 6 przegródkami'],
+    difficulty: 'Początkujący',
+    type: 'Rodzinne',
+    highlight: 'Zarezerwuj termin',
     image: '/images/gallery-floral-box.jpg',
-    ctaLabel: 'Reserve a date',
-    ctaDisabledLabel: 'Reserve a date',
-    dateTimes: [{ date: 'Date to be arranged', time: 'To be arranged' }]
+    ctaLabel: 'Zarezerwuj termin',
+    ctaDisabledLabel: 'Zarezerwuj termin',
+    dateTimes: [{ date: 'Do ustalenia', time: 'Do ustalenia', display: 'Termin do uzgodnienia' }]
   },
   {
     id: 'custom-workshop-request',
-    title: 'Custom Workshop on Request - Discover the Joy of Creating',
+    title: 'Warsztat na zamówienie – odkryj radość tworzenia',
     description:
-      'During this creative meeting, participants decorate a wooden object using the decoupage technique, giving it a unique character and style. It is a wonderful chance to unwind, relax, and create something beautiful with your own hands. No previous experience is required - all materials, patterns, and individual support are provided. Everyone leaves with a handmade piece that will decorate their home or make a meaningful gift.',
-    duration: 'Flexible',
+      'Podczas spotkania uczestnicy ozdabiają drewniany przedmiot techniką decoupage, nadając mu unikalny charakter. To idealny sposób na relaks, integrację i stworzenie pięknej pamiątki.',
+    duration: 'Elastyczny',
     price: 0,
-    priceDisplay: 'Custom pricing',
-    difficulty: 'Beginner',
-    type: 'Custom',
-    highlight: 'Ask for an Offer',
+    priceDisplay: 'Oferta indywidualna',
+    difficulty: 'Początkujący',
+    type: 'Na zamówienie',
+    highlight: 'Zapytaj o ofertę',
     image: '/images/gallery-marble-box.jpg',
-    ctaLabel: 'Ask for an offer',
-    ctaDisabledLabel: 'Ask for an offer',
-    dateTimes: [{ date: 'Flexible schedule', time: 'To be arranged' }]
+    ctaLabel: 'Zapytaj o ofertę',
+    ctaDisabledLabel: 'Zapytaj o ofertę',
+    dateTimes: [{ date: 'Elastyczny harmonogram', time: 'Do ustalenia', display: 'Termin do uzgodnienia' }]
   }
 ];

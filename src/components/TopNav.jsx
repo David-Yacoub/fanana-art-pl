@@ -1,8 +1,8 @@
 const navItems = [
-  { label: 'Schedule', href: '#schedule' },
-  { label: 'Workshops', href: '#workshops' },
-  { label: 'Gallery', href: '#gallery' },
-  { label: 'Contact', href: '#contact' },
+  { label: 'Harmonogram', href: '#schedule' },
+  { label: 'Warsztaty', href: '#workshops' },
+  { label: 'Galeria', href: '#gallery' },
+  { label: 'Kontakt', href: '#contact' },
   { label: 'Blog', href: 'https://ania-tdb.blogspot.com/', external: true }
 ];
 

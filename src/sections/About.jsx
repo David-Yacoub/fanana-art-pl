@@ -3,18 +3,18 @@ import { Feather, Heart, Star } from 'lucide-react';
 const pillars = [
   {
     icon: Feather,
-    title: 'Thoughtful techniques',
-    copy: 'Build foundational layers, distress finishes, and add bespoke details.'
+    title: 'Przemyślane techniki',
+    copy: 'Pokazujemy, jak układać warstwy, postarzac wykończenia i dodawać autorskie detale.'
   },
   {
     icon: Star,
-    title: 'Curated materials',
-    copy: 'Premium European papers, handcrafted stencils, and artist-grade mediums.'
+    title: 'Starannie dobrane materiały',
+    copy: 'Korzystamy z europejskich papierów premium, ręcznie tworzonych szablonów i profesjonalnych mediów.'
   },
   {
     icon: Heart,
-    title: 'Community focused',
-    copy: 'Work in a warm studio environment that celebrates shared creativity.'
+    title: 'Twórcza społeczność',
+    copy: 'Pracujemy w ciepłej atmosferze, gdzie dzielenie się pomysłami jest tak ważne jak efekt końcowy.'
   }
 ];
 
@@ -23,22 +23,19 @@ const About = () => (
     <div className="mx-auto max-w-6xl rounded-[2.5rem] border border-brand-ink/10 bg-white/80 p-10 shadow-lg backdrop-blur">
       <div className="grid gap-10 lg:grid-cols-[1.2fr,0.8fr] lg:items-center">
         <div className="space-y-6">
-          <p className="text-sm uppercase tracking-[0.4em] text-brand-forest">About Fanana-Art</p>
+          <p className="text-sm uppercase tracking-[0.4em] text-brand-forest">O Fanana-Art</p>
           <h2 className="font-display text-3xl text-brand-ink sm:text-4xl">
-            Guided by Fananah - artist, mentor, storyteller
+            Fananah – artystka, mentorka, opowiadaczka historii
           </h2>
           <p className="text-sm leading-relaxed text-brand-ink/75">
-            Inspired by the rich traditions of decoupage and European craft, Ania founded Fanana-Art to
-            nurture creativity within the Wisła community. With over a decade of teaching experience, she
-            blends detailed instruction with a gentle, encouraging approach. Sessions stay intentionally
-            intimate so every participant can explore, experiment, and complete pieces they are proud to
-            display.
+            Zainspirowana tradycją decoupage i europejskiego rzemiosła, Ania stworzyła Fanana-Art, aby rozwijać kreatywność
+            w społeczności Wisły. Ponad dziesięć lat doświadczenia dydaktycznego łączy z uważnym, wspierającym podejściem.
+            Spotkania pozostają kameralne, by każdy mógł eksperymentować i ukończyć pracę, z której będzie dumny.
           </p>
           <p className="text-sm leading-relaxed text-brand-ink/75">
-            Decoupage is the art of layering paper motifs, paint, and finishing techniques to transform
-            everyday objects into cherished keepsakes. Each workshop walks you through preparing surfaces,
-            composing designs, sealing your work for longevity, and adding tactile accents that make every
-            project uniquely yours.
+            Decoupage to sztuka nakładania motywów z papieru, farb i zabezpieczeń, które zmieniają codzienne przedmioty w
+            wyjątkowe pamiątki. Na warsztatach przeprowadzimy Cię przez przygotowanie powierzchni, kompozycję, zabezpieczenie i
+            dodawanie faktur, dzięki czemu każde dzieło nabiera indywidualnego charakteru.
           </p>
           <div className="grid gap-4 sm:grid-cols-3">
             {pillars.map((item) => (
@@ -57,14 +54,14 @@ const About = () => (
           <div className="relative overflow-hidden rounded-[2.5rem] border border-brand-ink/10 shadow-lg">
             <img
               src="https://images.unsplash.com/photo-1523475472560-d2df97ec485c?auto=format&fit=crop&w=900&q=60"
-              alt="Instructor arranging decoupage workshop materials"
+              alt="Instruktorka przygotowująca materiały do warsztatów decoupage"
               className="h-full w-full object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-brand-forest/10" />
           </div>
           <div className="absolute -bottom-8 -left-6 rounded-3xl border border-brand-forest/20 bg-white/90 px-6 py-4 shadow-lg">
-            <p className="text-xs uppercase tracking-[0.3em] text-brand-forest/60">Since 2014</p>
-            <p className="mt-1 font-display text-xl text-brand-forest">3200+ creative sessions</p>
+            <p className="text-xs uppercase tracking-[0.3em] text-brand-forest/60">Od 2014 roku</p>
+            <p className="mt-1 font-display text-xl text-brand-forest">3200+ kreatywnych spotkań</p>
           </div>
         </div>
       </div>

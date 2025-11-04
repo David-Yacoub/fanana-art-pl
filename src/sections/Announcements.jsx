@@ -7,9 +7,9 @@ const iconMap = {
 };
 
 const badgeCopy = {
-  offer: 'Activity',
-  info: 'Update',
-  new: 'New'
+  offer: 'Oferta',
+  info: 'Aktualność',
+  new: 'Nowość'
 };
 
 const Announcements = ({ data }) => {
@@ -24,11 +24,11 @@ const Announcements = ({ data }) => {
         <div className="relative space-y-10 px-8 py-12 sm:px-12 lg:px-16">
           <div className="max-w-3xl space-y-4">
             <span className="inline-flex rounded-full bg-brand-forest/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.4em] text-brand-forest">
-              Activities
+              Aktualności
             </span>
-            <h2 className="font-display text-3xl text-brand-ink sm:text-4xl">Explore our activities</h2>
+            <h2 className="font-display text-3xl text-brand-ink sm:text-4xl">Poznaj nasze aktualne propozycje</h2>
             <p className="text-sm leading-relaxed text-brand-ink/70">
-              Discover studio sessions, outreach programmes, and seasonal gatherings you can reserve today.
+              Odkryj zajęcia w pracowni, wyjazdowe programy oraz sezonowe wydarzenia, które możesz zarezerwować już dziś.
             </p>
           </div>
 
@@ -60,7 +60,7 @@ const Announcements = ({ data }) => {
                       <div className="space-y-2">
                         <div className="flex flex-wrap items-center gap-2 text-xs font-semibold uppercase tracking-wide text-brand-forest">
                           <span className="rounded-full bg-brand-forest/10 px-3 py-1">
-                            {badgeCopy[announcement.type] ?? 'Activity'}
+                            {badgeCopy[announcement.type] ?? 'Aktualność'}
                           </span>
                           {announcement.note && (
                             <span className="rounded-full border border-brand-forest/15 px-3 py-1 text-brand-forest/80">
@@ -82,7 +82,7 @@ const Announcements = ({ data }) => {
                         className="mt-6 inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-wide text-brand-forest transition hover:text-brand-forest/80"
                       >
                         {announcement.ctaLabel}
-                        <span aria-hidden="true">-&gt;</span>
+                        <span aria-hidden="true">→</span>
                       </a>
                     )}
                   </div>

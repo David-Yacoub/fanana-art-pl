@@ -11,7 +11,10 @@ import { buildBookingUrl, pickUpcomingDate } from '../utils/formPrefill.js';
 const difficultyBadge = {
   Beginner: 'bg-emerald-50 text-emerald-700 border-emerald-100',
   Intermediate: 'bg-amber-50 text-amber-700 border-amber-100',
-  Advanced: 'bg-rose-50 text-rose-700 border-rose-100'
+  Advanced: 'bg-rose-50 text-rose-700 border-rose-100',
+  'Początkujący': 'bg-emerald-50 text-emerald-700 border-emerald-100',
+  'Średnio zaawansowany': 'bg-amber-50 text-amber-700 border-amber-100',
+  'Zaawansowany': 'bg-rose-50 text-rose-700 border-rose-100'
 };
 
 const toIsoFromDateTime = (date, time) => {
@@ -40,14 +43,13 @@ const WorkshopCard = ({ workshop, onInterested: _onInterested }) => {
     workshop.bookingUrl ||
     buildBookingUrl({
       title: workshop.title,
-      dateIso,
-      city: workshop.city ?? workshop.location?.city ?? ''
+      dateIso
     });
   const isDisabled = !bookingUrl;
   const priceDisplay =
     workshop.priceDisplay ??
-    (typeof workshop.price === 'number' ? `${workshop.price} PLN` : 'To be confirmed');
-  const ctaLabel = workshop.ctaLabel ?? 'Reserve your spot';
+    (typeof workshop.price === 'number' ? `${workshop.price} PLN` : 'Do ustalenia');
+  const ctaLabel = workshop.ctaLabel ?? 'Zarezerwuj miejsce';
   const ctaDisabledLabel = workshop.ctaDisabledLabel ?? ctaLabel;
 
   return (
@@ -89,14 +91,14 @@ const WorkshopCard = ({ workshop, onInterested: _onInterested }) => {
           <div className="flex items-center gap-2 rounded-2xl bg-brand-cream/60 px-3 py-2">
             <Clock3 className="h-4 w-4 text-brand-forest" />
             <div>
-              <dt className="font-semibold text-brand-forest">Duration</dt>
+              <dt className="font-semibold text-brand-forest">Czas trwania</dt>
               <dd>{workshop.duration}</dd>
             </div>
           </div>
           <div className="flex items-center gap-2 rounded-2xl bg-brand-cream/60 px-3 py-2">
             <Wallet className="h-4 w-4 text-brand-forest" />
             <div>
-              <dt className="font-semibold text-brand-forest">Investment</dt>
+              <dt className="font-semibold text-brand-forest">Budżet</dt>
               <dd>
                 {priceDisplay}
                 {Array.isArray(workshop.pricingDetails) && workshop.pricingDetails.length > 0 && (
@@ -112,14 +114,14 @@ const WorkshopCard = ({ workshop, onInterested: _onInterested }) => {
           <div className="flex items-center gap-2 rounded-2xl bg-brand-cream/60 px-3 py-2">
             <SignalHigh className="h-4 w-4 text-brand-forest" />
             <div>
-              <dt className="font-semibold text-brand-forest">Level</dt>
+              <dt className="font-semibold text-brand-forest">Poziom</dt>
               <dd>{workshop.difficulty}</dd>
             </div>
           </div>
           <div className="flex items-start gap-2 rounded-2xl bg-brand-cream/60 px-3 py-2">
             <CalendarDays className="mt-0.5 h-4 w-4 text-brand-forest" />
             <div>
-              <dt className="font-semibold text-brand-forest">Upcoming</dt>
+              <dt className="font-semibold text-brand-forest">Najbliższe terminy</dt>
               <dd className="space-y-1">
                 {upcomingSlots.map((slot, index) => {
                   const key = slot.display ?? `${slot.date ?? 'unscheduled'}-${slot.time ?? index}`;
@@ -127,7 +129,7 @@ const WorkshopCard = ({ workshop, onInterested: _onInterested }) => {
                     slot.display ??
                     (() => {
                       if (!slot?.date) {
-                        return 'Date to be arranged';
+                        return 'Termin do uzgodnienia';
                       }
                       const formatted = format(slot.date);
                       if (!slot?.time) {
@@ -153,7 +155,7 @@ const WorkshopCard = ({ workshop, onInterested: _onInterested }) => {
           <a
             href={bookingUrl}
             className="inline-flex items-center justify-center gap-2 rounded-full bg-brand-forest px-5 py-3 text-sm font-semibold uppercase tracking-wide text-white shadow transition hover:bg-brand-forest/90"
-            aria-label={`${ctaLabel} for ${workshop.title}`}
+            aria-label={`${ctaLabel} – ${workshop.title}`}
           >
             {ctaLabel}
           </a>
