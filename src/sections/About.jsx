@@ -1,4 +1,4 @@
-import { Feather, Heart, Star } from 'lucide-react';
+﻿import { Feather, Heart, Star } from 'lucide-react';
 
 const pillars = [
   {
@@ -61,7 +61,7 @@ const About = () => (
           </div>
           <div className="absolute -bottom-8 -left-6 rounded-3xl border border-brand-forest/20 bg-white/90 px-6 py-4 shadow-lg">
             <p className="text-xs uppercase tracking-[0.3em] text-brand-forest/60">Od 2014 roku</p>
-            <p className="mt-1 font-display text-xl text-brand-forest">3200+ kreatywnych spotkań</p>
+            <p className="mt-1 font-display text-xl text-brand-forest">Warsztaty w roznych krajach</p>
           </div>
         </div>
       </div>
@@ -70,3 +70,8 @@ const About = () => (
 );
 
 export default About;
+
+
+
+
+
