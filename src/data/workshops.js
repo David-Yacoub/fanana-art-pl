@@ -1,11 +1,11 @@
-export const workshopTypes = ['Decoupage', 'Mixed media', 'Cykl sezonowy', 'Rodzinne', 'Na zamówienie'];
+﻿export const workshopTypes = ['Decoupage', 'Mixed media', 'Cykl sezonowy', 'Rodzinne', 'Na zamówienie'];
 
 export const workshops = [
   {
     id: 'earrings-workshop',
-    title: 'Warsztat drewnianych kolczyków',
+    title: 'Warsztaty z tworzenia kolczyków',
     description:
-      'Stwórz trzy pary lekkich, drewnianych kolczyków dopasowanych do Twojego stylu. Poznasz podstawy decoupage, dobierzesz wzory oraz wykończenia i zabierzesz ze sobą gotowe ozdoby.',
+      'Stwórz swoje niepowtarzalne drewniane kolczyki, które ozdobią każdą kreację i podkreślą Twój wyjątkowy styl.',
     duration: '2 godziny',
     price: 65,
     priceDisplay: '65 zł / 3 pary kolczyków',
@@ -25,9 +25,9 @@ export const workshops = [
   },
   {
     id: 'candle-holder-workshop',
-    title: 'Warsztat świeczników dekoracyjnych',
+    title: 'Warsztaty z tworzenia świeczników',
     description:
-      'Zaprojektuj świecznik, który rozświetli długie wieczory i doda przytulnego blasku Twojemu wnętrzu. Zajęcia prowadzone są spokojnym tempem, z naciskiem na relaks i twórczą zabawę.',
+      'Stwórz świecznik, który rozświetli długie wieczory i doda przytulnego blasku Twojemu wnętrzu. Zajęcia prowadzone są spokojnym tempem, z naciskiem na relaks i twórczą zabawę.',
     duration: '2 godziny',
     price: 0,
     priceDisplay: 'Do potwierdzenia',
@@ -49,9 +49,9 @@ export const workshops = [
   },
   {
     id: 'mixed-media-canvas',
-    title: 'Płótno mixed media',
+    title: 'Warsztaty z tworzenia pudełek',
     description:
-      'Eksperymentuj z decoupage, akrylami i pastami strukturalnymi, aby stworzyć warstwowy obraz pełen charakteru i głębi.',
+      'Zapraszamy na kreatywne warsztaty, podczas których stworzysz własne, unikalne pudełko ozdobione techniką decoupage. To idealna okazja, by połączyć relaks oraz sztukę. Pod okiem instruktora nauczysz się, jak dobierać kolory, motywy i wykończenia, aby Twoje pudełko stało się małym dziełem sztuki - idealnym na prezent lub do przechowywania drobiazgów. ',
     duration: '4 godziny',
     price: 85,
     difficulty: 'Zaawansowany',
@@ -103,7 +103,7 @@ export const workshops = [
     id: 'christmas-workshops-children',
     title: 'Świąteczne warsztaty dla dzieci',
     description:
-      'Magiczne zajęcia, podczas których dzieci tworzą dekoracje świąteczne. Warsztaty rozwijają kreatywność, sprawiają radość i pozwalają zabrać do domu własnoręcznie wykonane ozdoby.',
+      'Świąteczne warsztaty dla dzieci to wyjątkowa okazja, by stworzyć własne, piękne dekoracje świąteczne. Zajęcia pobudzą kreatywność, wprowadzą uczestników w nastrój świąt i pozwolą im udekorować domy własnoręcznie wykonanymi dziełami. Max ilość dzieci w grupie do 15 osób)',
     duration: '45–60 minut',
     price: 25,
     priceDisplay: '20–25 zł',
@@ -121,9 +121,9 @@ export const workshops = [
   },
   {
     id: 'wooden-clock-workshop',
-    title: 'Warsztat drewnianych zegarów',
+    title: 'Warsztaty z tworzenia zegarów',
     description:
-      'Stwórz funkcjonalny zegar z drewnianej bazy, łącząc sztukę, relaks i własny styl. Nie potrzebujesz doświadczenia – zapewniamy materiały i wsparcie krok po kroku.',
+      'Zapraszamy na kreatywne spotkanie, podczas którego uczestnicy ozdobią drewniany zegar w technice decoupage – łącząc sztukę, relaks i własny styl. Nie potrzeba żadnego doświadczenia – zapewniamy wszystkie materiały, inspiracje i krok po kroku przeprowadzimy przez proces tworzenia.',
     duration: '2 godziny',
     price: 90,
     priceDisplay: '90 zł',
@@ -138,9 +138,9 @@ export const workshops = [
   },
   {
     id: 'tea-box-workshop',
-    title: 'Warsztat herbacianych szkatułek',
+    title: 'Warsztaty z tworzenia pudełek na herbatę',
     description:
-      'Ozdób drewnianą szkatułkę na herbaty techniką decoupage – powstanie piękny i praktyczny dodatek do kuchni lub prezent od serca.',
+      'Zapraszamy na wyjątkowe warsztaty, podczas których uczestnicy ozdobią drewniane pudełko na herbatę w technice decoupage– własnoręcznie wykonany przedmiot, który stanie się ozdobą kuchni lub wyjątkowym prezentem dla bliskiej osoby. Nie potrzeba żadnych umiejętności plastycznych – zapewniamy wszystkie materiały, wzory i instruktaż krok po kroku. Zajęcia odbywają się w kameralnych grupach (3–10 osób), co gwarantuje indywidualne wsparcie i czas na rozwinięcie kreatywności.',
     duration: '2 godziny',
     price: 70,
     priceDisplay: '70–80 zł',
@@ -155,9 +155,9 @@ export const workshops = [
   },
   {
     id: 'custom-workshop-request',
-    title: 'Warsztat na zamówienie – odkryj radość tworzenia',
+    title: 'Warsztaty na zamówienie - odkryj radość z tworzenia',
     description:
-      'Podczas spotkania uczestnicy ozdabiają drewniany przedmiot techniką decoupage, nadając mu unikalny charakter. To idealny sposób na relaks, integrację i stworzenie pięknej pamiątki.',
+      'Podczas spotkania uczestnicy ozdobią drewniany przedmiot w technice decoupage, nadając mu niepowtarzalny styl i charakter. To doskonała okazja, by oderwać się od codzienności, zrelaksować przy twórczej pracy i stworzyć coś pięknego własnymi rękami.',
     duration: 'Elastyczny',
     price: 0,
     priceDisplay: 'Oferta indywidualna',
@@ -170,3 +170,14 @@ export const workshops = [
     dateTimes: [{ date: 'Elastyczny harmonogram', time: 'Do ustalenia', display: 'Termin do uzgodnienia' }]
   }
 ];
+
+
+
+
+
+
+
+
+
+
+
