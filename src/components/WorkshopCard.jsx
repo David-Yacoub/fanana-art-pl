@@ -1,3 +1,4 @@
+﻿import { useMemo, useState } from 'react';
 import {
   CalendarDays,
   Clock3,
@@ -27,6 +28,7 @@ const toIsoFromDateTime = (date, time) => {
 };
 
 const WorkshopCard = ({ workshop, onInterested: _onInterested }) => {
+  const [isDescriptionExpanded, setIsDescriptionExpanded] = useState(false);
   const upcomingSlots = Array.isArray(workshop.dateTimes) ? workshop.dateTimes : [];
 
   const schedulesFromDateTimes = upcomingSlots
@@ -52,8 +54,25 @@ const WorkshopCard = ({ workshop, onInterested: _onInterested }) => {
   const ctaLabel = workshop.ctaLabel ?? 'Zarezerwuj miejsce';
   const ctaDisabledLabel = workshop.ctaDisabledLabel ?? ctaLabel;
 
+  const normalizedDescription = (workshop.description ?? '').trim();
+
+  const shouldTruncateDescription = normalizedDescription.length > 220;
+
+  const truncatedDescription = useMemo(() => {
+    if (!shouldTruncateDescription) return normalizedDescription;
+    const slice = normalizedDescription.slice(0, 220);
+    const lastSpace = slice.lastIndexOf(' ');
+    const safeSlice = lastSpace > 180 ? slice.slice(0, lastSpace) : slice;
+    return `${safeSlice.trimEnd()}...`;
+  }, [normalizedDescription, shouldTruncateDescription]);
+
+  const descriptionToDisplay =
+    shouldTruncateDescription && !isDescriptionExpanded
+      ? truncatedDescription
+      : normalizedDescription;
+
   return (
-    <article className="group relative overflow-hidden rounded-3xl border border-brand-ink/10 bg-white/80 shadow-sm backdrop-blur transition hover:-translate-y-1 hover:shadow-xl">
+    <article className="group relative flex h-full flex-col overflow-hidden rounded-3xl border border-brand-ink/10 bg-white/80 shadow-sm backdrop-blur transition hover:-translate-y-1 hover:shadow-xl">
       <div
         className="relative h-56 overflow-hidden"
         style={{
@@ -81,10 +100,19 @@ const WorkshopCard = ({ workshop, onInterested: _onInterested }) => {
         )}
       </div>
 
-      <div className="flex flex-col gap-6 p-6">
-        <div>
+      <div className="flex flex-1 flex-col gap-6 p-6">
+        <div className="flex min-h-[200px] flex-col gap-3 text-sm leading-relaxed text-brand-ink/75">
           <h3 className="font-display text-2xl text-brand-ink">{workshop.title}</h3>
-          <p className="mt-2 text-sm leading-relaxed text-brand-ink/75">{workshop.description}</p>
+          <p>{descriptionToDisplay}</p>
+          {shouldTruncateDescription && (
+            <button
+              type="button"
+              onClick={() => setIsDescriptionExpanded((previous) => !previous)}
+              className="mt-2 self-start text-sm font-semibold text-brand-forest transition hover:text-brand-forest/80"
+            >
+              {isDescriptionExpanded ? 'Zwiń opis' : 'Zobacz więcej'}
+            </button>
+          )}
         </div>
 
         <dl className="grid grid-cols-2 gap-3 text-sm text-brand-ink/70">
@@ -144,25 +172,36 @@ const WorkshopCard = ({ workshop, onInterested: _onInterested }) => {
           </div>
         </dl>
 
-        {isDisabled ? (
-          <span
-            aria-disabled="true"
-            className="inline-flex items-center justify-center gap-2 rounded-full bg-brand-forest px-5 py-3 text-sm font-semibold uppercase tracking-wide text-white opacity-50"
-          >
-            {ctaDisabledLabel}
-          </span>
-        ) : (
-          <a
-            href={bookingUrl}
-            className="inline-flex items-center justify-center gap-2 rounded-full bg-brand-forest px-5 py-3 text-sm font-semibold uppercase tracking-wide text-white shadow transition hover:bg-brand-forest/90"
-            aria-label={`${ctaLabel} – ${workshop.title}`}
-          >
-            {ctaLabel}
-          </a>
-        )}
+        <div className="mt-auto">
+          {isDisabled ? (
+            <span
+              aria-disabled="true"
+              className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-brand-forest px-5 py-3 text-sm font-semibold uppercase tracking-wide text-white opacity-50"
+            >
+              {ctaDisabledLabel}
+            </span>
+          ) : (
+            <a
+              href={bookingUrl}
+              className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-brand-forest px-5 py-3 text-sm font-semibold uppercase tracking-wide text-white shadow transition hover:bg-brand-forest/90"
+              aria-label={`${ctaLabel} - ${workshop.title}`}
+            >
+              {ctaLabel}
+            </a>
+          )}
+        </div>
       </div>
     </article>
   );
 };
 
 export default WorkshopCard;
+
+
+
+
+
+
+
+
+
