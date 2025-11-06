@@ -1,6 +1,5 @@
 import { useMemo, useState } from 'react';
 import { NotebookPen } from 'lucide-react';
-import WorkshopFilters from '../components/WorkshopFilters.jsx';
 import WorkshopCard from '../components/WorkshopCard.jsx';
 import { workshopTypes, workshops } from '../data/workshops.js';
 import { format } from '../utils/date.js';
@@ -72,15 +71,6 @@ const Workshops = ({ onInterested }) => {
             Aktualizujemy co tydzień
           </div>
         </div>
-
-        <WorkshopFilters
-          filters={filters}
-          onChange={setFilters}
-          types={workshopTypes}
-          difficulties={difficultyOptions}
-          dates={dateOptions}
-          priceOptions={priceOptions}
-        />
 
         {filteredWorkshops.length > 0 ? (
           <div className="grid gap-8 md:grid-cols-2">

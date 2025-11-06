@@ -28,14 +28,16 @@ const About = () => (
             Fananah – artystka, mentorka, opowiadaczka historii
           </h2>
           <p className="text-sm leading-relaxed text-brand-ink/75">
-            Zainspirowana tradycją decoupage i europejskiego rzemiosła, Ania stworzyła Fanana-Art, aby rozwijać kreatywność
-            w społeczności Wisły. Ponad dziesięć lat doświadczenia dydaktycznego łączy z uważnym, wspierającym podejściem.
-            Spotkania pozostają kameralne, by każdy mógł eksperymentować i ukończyć pracę, z której będzie dumny.
+            Gdy pewnego razu, przechodząc przez rynek w Wiśle, Ania zatrzymała się przy stoisku z decoupage,
+             stworzyła swoje pierwsze małe pudełko. Z niewielkim pakietem startowym wróciła do domu — i właśnie wtedy zaczęła się jej przygoda z tą techniką.
+             Dziś, ponad piętnaście lat później, decoupage wciąż pozostaje jedną z jej ulubionych form twórczej ekspresji.
+             Przeprowadziła wiele warsztatów, wspierając różne misje i inicjatywy społeczne, a każde spotkanie prowadzi z pasją, otwartością i ciepłem, które inspirują innych do odkrywania własnej kreatywności.
           </p>
           <p className="text-sm leading-relaxed text-brand-ink/75">
-            Decoupage to sztuka nakładania motywów z papieru, farb i zabezpieczeń, które zmieniają codzienne przedmioty w
-            wyjątkowe pamiątki. Na warsztatach przeprowadzimy Cię przez przygotowanie powierzchni, kompozycję, zabezpieczenie i
-            dodawanie faktur, dzięki czemu każde dzieło nabiera indywidualnego charakteru.
+            Cały pomysł – warsztaty, pracownia i nazwa Fanana-Art – zrodził się z inspiracji jej męża, który zachęcił ją,
+             by rozwijała się dalej w tej dziedzinie i dzieliła swoją pasję z innymi.
+             Nazwa Fanana pochodzi z języka arabskiego i oznacza artystkę. Jej wybór nie jest przypadkowy – mąż Ani pochodzi z Egiptu, a sama Ania przez dziesięć lat mieszkała w tym kraju.
+             To właśnie egipskie doświadczenia i połączenie dwóch kultur stały się inspiracją do stworzenia marki o arabskiej duszy i europejskiej wrażliwości.
           </p>
           <div className="grid gap-4 sm:grid-cols-3">
             {pillars.map((item) => (
