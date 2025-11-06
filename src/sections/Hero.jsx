@@ -35,19 +35,22 @@ const Hero = ({ onCtaClick }) => (
     <div className="absolute inset-y-0 -left-24 hidden w-64 rotate-12 bg-white/20 blur-3xl sm:block" />
     <div className="absolute inset-y-0 -right-32 hidden w-72 -rotate-12 bg-white/20 blur-3xl lg:block" />
 
-<div className="relative mx-auto flex min-h-[70vh] max-w-6xl flex-col justify-center gap-10 px-6 py-24 sm:px-10 lg:px-12">
-      <div className="mx-auto w-full max-w-xl rounded-full border border-brand-forest/20 bg-white/90 px-6 py-3 text-center text-xs font-semibold uppercase tracking-[0.35em] text-brand-forest shadow-md">
-        Wszystkie zdjecia prezentuja nasze prace
-      </div>
+    <div className="relative mx-auto flex min-h-[70vh] max-w-6xl flex-col justify-center gap-10 px-6 py-24 sm:px-10 lg:px-12">
       <div className="flex items-center gap-3 text-sm font-medium uppercase tracking-[0.3em] text-brand-forest/70">
         <Sparkles className="h-5 w-5" />
         Warsztaty Fanana-Art
       </div>
 
       <div className="max-w-3xl space-y-6 rounded-3xl bg-white/85 p-6 shadow-lg backdrop-blur">
-        <h1 className="font-display text-4xl leading-tight text-brand-ink sm:text-5xl lg:text-6xl">
-          Pracownia Fanana-Art
-        </h1>
+        <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+          <h1 className="font-display text-4xl leading-tight text-brand-ink sm:text-5xl lg:text-6xl">
+            Pracownia Fanana-Art
+          </h1>
+          <div className="inline-flex items-center gap-2 rounded-full border border-brand-forest/20 bg-white/90 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.35em] text-brand-forest shadow-sm">
+            <Sparkles className="h-4 w-4" />
+            Wszystkie zdjecia to nasze prace
+          </div>
+        </div>
         <p className="max-w-xl text-lg leading-relaxed text-brand-ink/80 sm:text-xl">
           Warsztaty decoupage – odkryj radość tworzenia rękami i sercem. Zapraszamy do świata, w którym papier, kolory i
           faktury opowiadają historie.
