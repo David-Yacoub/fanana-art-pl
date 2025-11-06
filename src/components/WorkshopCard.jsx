@@ -73,15 +73,14 @@ const WorkshopCard = ({ workshop, onInterested: _onInterested }) => {
 
   return (
     <article className="group relative flex h-full flex-col overflow-hidden rounded-3xl border border-brand-ink/10 bg-white/80 shadow-sm backdrop-blur transition hover:-translate-y-1 hover:shadow-xl">
-      <div
-        className="relative h-56 overflow-hidden"
-        style={{
-          backgroundImage: `url(${workshop.image})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center'
-        }}
-      >
-        <div className="absolute inset-0 bg-gradient-to-t from-brand-ink/70 via-brand-ink/20 to-transparent" />
+      <div className="relative flex h-56 items-center justify-center overflow-hidden bg-white">
+        <img
+          src={workshop.image}
+          alt={workshop.title}
+          className="h-full w-full object-contain"
+          loading="lazy"
+        />
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-brand-ink/70 via-brand-ink/20 to-transparent" />
         <div className="absolute bottom-5 left-5 flex flex-wrap items-center gap-2 text-sm font-semibold text-white drop-shadow">
           <span
             className={`rounded-full border px-3 py-1 ${difficultyBadge[workshop.difficulty] ?? ''}`}
