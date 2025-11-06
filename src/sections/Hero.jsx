@@ -16,7 +16,7 @@ const featureHighlights = [
   {
     title: 'Wyjdziesz z dziełem, które pokochasz',
     copy: 'Stwórz swoje własne dzieło i zabierz je do domu. Ozdób nim swoje wnętrze lub podaruj komuś bliskiemu w prezencie.',
-    image: '/images/Leave_with_the_art_you_love.jpg',
+    image: '/images/leave_with_the_art_you_love.jpg',
     alt: 'Dekoracyjna szkatułka wykonana podczas warsztatów'
   }
 ];
