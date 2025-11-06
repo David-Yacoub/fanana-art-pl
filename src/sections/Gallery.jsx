@@ -179,7 +179,7 @@ const Gallery = () => {
                   </div>
                   <div className="flex justify-between border-b border-brand-ink/10 pb-2">
                     <dt className="font-medium uppercase tracking-[0.25em]">Czas pracy</dt>
-                    <dd>4–6 godzin</dd>
+                    <dd>1–2 godzin</dd>
                   </div>
                   <div className="flex justify-between">
                     <dt className="font-medium uppercase tracking-[0.25em]">Instruktorka</dt>
