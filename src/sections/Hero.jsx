@@ -4,19 +4,19 @@ const featureHighlights = [
   {
     title: 'Warsztaty decoupage',
     copy: 'Oferujemy warsztaty grupowe w pracowni (3–10 osób) oraz warsztaty wyjazdowe (3–15 osób). Z nami spędzisz kreatywny czas w miłej atmosferze, przy kawie i ciastku.',
-    image: '/images/hero-small-group.jpg',
+    image: '/images/hero_small_group.jpg',
     alt: 'Warsztaty dla dzieci i dorosłych'
   },
   {
     title: 'Materiały w cenie zajęć',
     copy: 'Pracownia zapewnia wszystkie niezbędne materiały — farby, serwetki, papiery ryżowe, różne rodzaje lakierów, kleje do spękań oraz dodatki do ozdabiania. Wystarczy, że przyjdziesz i dasz się zainspirować!',
-    image: '/images/hero-materials.jpg',
+    image: '/images/hero_materials.jpg',
     alt: 'Profesjonalne materiały do decoupage'
   },
   {
     title: 'Wyjdziesz z dziełem, które pokochasz',
     copy: 'Stwórz swoje własne dzieło i zabierz je do domu. Ozdób nim swoje wnętrze lub podaruj komuś bliskiemu w prezencie.',
-    image: '/images/leave_with_the_art_you_love.jpg',
+    image: '/images/Leave_with_the_art_you_love.jpg',
     alt: 'Dekoracyjna szkatułka wykonana podczas warsztatów'
   }
 ];

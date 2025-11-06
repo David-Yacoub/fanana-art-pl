@@ -57,7 +57,7 @@ export const workshops = [
     difficulty: 'Początkujący',
     type: 'Rodzinne',
     highlight: 'Dla całej rodziny',
-    image: '/images/birthday_workshop.jpg',
+    image: '/images/workshop_cloth_holder.jpg',
     dateTimes: [
       { date: '2024-12-28', time: '16:00' },
       { date: '2025-01-25', time: '11:30' }
@@ -78,7 +78,7 @@ export const workshops = [
     difficulty: 'Początkujący',
     type: 'Rodzinne',
     highlight: 'Świąteczna edycja',
-    image: '/images/gallery-love-beyond-words.jpg',
+    image: '/images/kids_christmas_workshop.jpg',
     ctaLabel: 'Zarezerwuj termin',
     ctaDisabledLabel: 'Zarezerwuj termin',
     dateTimes: [
@@ -103,7 +103,7 @@ export const workshops = [
     difficulty: 'Początkujący',
     type: 'Decoupage',
     highlight: 'Małe grupy 3-10',
-    image: '/images/gallery-rose-clock.jpg',
+    image: '/images/gallery_flower_clock.jpg',
     ctaLabel: 'Zarezerwuj termin',
     ctaDisabledLabel: 'Zarezerwuj termin',
     dateTimes: [
@@ -129,7 +129,7 @@ export const workshops = [
     difficulty: 'Początkujący',
     type: 'Rodzinne',
     highlight: 'Zarezerwuj termin',
-    image: '/images/gallery-lavender-box.jpg',
+    image: '/images/tea_box_workshop.jpg',
     ctaLabel: 'Zarezerwuj termin',
     ctaDisabledLabel: 'Zarezerwuj termin',
     dateTimes: [
@@ -151,7 +151,7 @@ export const workshops = [
     difficulty: 'Początkujący',
     type: 'Na zamówienie',
     highlight: 'Zapytaj o ofertę',
-    image: '/images/gallery-marble-box.jpg',
+    image: '/images/gallery_lavendar_box.jpg',
     ctaLabel: 'Zapytaj o ofertę',
     ctaDisabledLabel: 'Zapytaj o ofertę',
     dateTimes: [

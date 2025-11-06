@@ -20,7 +20,7 @@ export const announcements = [
     note: 'Elastyczne terminy w placówkach',
     ctaLabel: 'Zamów wizytę w szkole',
     ctaHref: '#contact',
-    image: '/images/announcement-education.jpg',
+    image: '/images/workshop_for_kids.png',
     priority: 1
   },
   {
@@ -32,7 +32,7 @@ export const announcements = [
     note: 'Rezerwacje na marzec otwarte',
     ctaLabel: 'Zarezerwuj miejsca',
     ctaHref: '#contact',
-    image: '/images/announcement-womens-day.jpg',
+    image: '/images/announcement_womens_day.jpg',
     priority: 2
   },
   {
@@ -44,7 +44,7 @@ export const announcements = [
     note: 'Spersonalizowane spotkanie 1:1',
     ctaLabel: 'Kup voucher',
     ctaHref: '#contact',
-    image: '/images/announcement-voucher.jpg',
+    image: '/images/announcement_voucher.jpg',
     priority: 3
   }
 ];
