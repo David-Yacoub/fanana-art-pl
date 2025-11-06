@@ -8,7 +8,8 @@ export const workshops = [
       'Stwórz swoje niepowtarzalne drewniane kolczyki, które ozdobią każdą kreację i podkreślą Twój wyjątkowy styl.',
     duration: '2 godziny',
     price: 65,
-    priceDisplay: '65 zł / 3 pary kolczyków',
+    priceDisplay: '65 zł',
+    pricingDetails: ['3 pary kolczyków'],
     difficulty: 'Początkujący',
     type: 'Decoupage',
     highlight: 'Dla początkujących',
@@ -29,8 +30,9 @@ export const workshops = [
     description:
       'Stwórz świecznik, który rozświetli długie wieczory i doda przytulnego blasku Twojemu wnętrzu. Zajęcia prowadzone są spokojnym tempem, z naciskiem na relaks i twórczą zabawę.',
     duration: '2 godziny',
-    price: 50,
-    priceDisplay: '50 zł (za jeden duży świecznik)',
+    price: null,
+    priceDisplay: '25-50 zł',
+    pricingDetails: ['Cena w zależności od wielkości świecznika'],
     difficulty: 'Początkujący',
     type: 'Decoupage',
     highlight: 'Zarezerwuj termin',
@@ -49,19 +51,19 @@ export const workshops = [
   },
   {
     id: 'family-collage-workshop',
-    title: 'Rodzinny warsztat kolażu',
+    title: 'Warsztaty z tworzenia wieszaków',
     description:
       'Zapraszamy na kreatywne warsztaty, podczas których ozdobisz drewniany wieszak techniką decoupage! To doskonała okazja, by połączyć sztukę z praktycznym zastosowaniem i stworzyć unikalny element dekoracyjny do swojego domu. Każdy uczestnik wykonany własny wieszak - idealny do przedpokoju, sypialni lub jako oryginalny prezent dla bliskiej osoby.',
     duration: '2 godziny',
     price: 65,
-    priceDisplay: '65 zł / 2 wieszaki',
+    priceDisplay: '65 zł',
+    pricingDetails: ['2 wieszaki'],
     difficulty: 'Początkujący',
     type: 'Decoupage',
-    highlight: 'Dla całej rodziny',
+    highlight: 'Ciakawy pomysł na prezent',
     image: '/images/workshop_cloth_holder.jpg',
     dateTimes: [
-      { date: '2024-12-28', time: '16:00' },
-      { date: '2025-01-25', time: '11:30' }
+      "Termin do uzgodnienia"
     ]
   },
   {
@@ -73,8 +75,8 @@ export const workshops = [
     price: 25,
     priceDisplay: '20-25 zł',
     pricingDetails: [
-      '25 zł – decoupage na krążkach brzozy',
-      '20 zł – decoupage na zawieszkach drewnianych'
+      '25 zł / krążek brzozy lub świecznik',
+      '20 zł / zawieszka drewniana'
     ],
     difficulty: 'Początkujący',
     type: 'Decoupage',
@@ -99,7 +101,7 @@ export const workshops = [
     price: 90,
     priceDisplay: '90 zł',
     pricingDetails: [
-      'Przy rezerwacji podaj liczbę osób (3-10)'
+      null
     ],
     difficulty: 'Początkujący',
     type: 'Decoupage',
@@ -122,10 +124,9 @@ export const workshops = [
       'Zapraszamy na wyjątkowe warsztaty, podczas których uczestnicy ozdobią drewniane pudełko na herbatę w technice decoupage – własnoręcznie wykonany przedmiot, który stanie się ozdobą kuchni lub wyjątkowym prezentem dla bliskiej osoby. Nie potrzeba żadnych umiejętności plastycznych – zapewniamy wszystkie materiały, wzory i instruktaż krok po kroku. Zajęcia odbywają się w kameralnych grupach (3–10 osób), co gwarantuje indywidualne wsparcie i czas na rozwinięcie kreatywności.',
     duration: '2 godziny',
     price: 70,
-    priceDisplay: '70-80 zł',
+    priceDisplay: '45-65 zł',
     pricingDetails: [
-      '70 zł – pudełko z 4 przegródkami',
-      '80 zł – pudełko z 6 przegródkami'
+      'w zależności od ilości przegródek w pudełku (2, 3, 4 lub 6)'
     ],
     difficulty: 'Początkujący',
     type: 'Decoupage',
@@ -148,7 +149,10 @@ export const workshops = [
       'Podczas spotkania uczestnicy ozdobią drewniany przedmiot w technice decoupage, nadając mu niepowtarzalny styl i charakter. To doskonała okazja, by oderwać się od codzienności, zrelaksować przy twórczej pracy i stworzyć coś pięknego własnymi rękami.',
     duration: 'Elastyczny',
     price: 0,
-    priceDisplay: 'Oferta indywidualna',
+    priceDisplay:'45-100 zł',
+    pricingDetails: [
+       'Oferta indywidualna'
+    ],
     difficulty: 'Początkujący',
     type: 'Na zamówienie',
     highlight: 'Zapytaj o ofertę',

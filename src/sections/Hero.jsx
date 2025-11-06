@@ -3,7 +3,7 @@ import { Palette, Paintbrush2, Sparkles } from 'lucide-react';
 const featureHighlights = [
   {
     title: 'Warsztaty decoupage',
-    copy: 'Oferujemy warsztaty grupowe w pracowni (3–10 osób) oraz warsztaty wyjazdowe (3–15 osób). Z nami spędzisz kreatywny czas w miłej atmosferze, przy kawie i ciastku.',
+    copy: 'Oferujemy warsztaty grupowe w pracowni (3–8 osób) oraz warsztaty wyjazdowe (3–15 osób). Z nami spędzisz kreatywny czas w miłej atmosferze, przy kawie i ciastku.',
     image: '/images/hero_small_group.jpg',
     alt: 'Warsztaty dla dzieci i dorosłych'
   },

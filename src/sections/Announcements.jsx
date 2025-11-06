@@ -55,7 +55,7 @@ const Announcements = ({ data }) => {
             </span>
             <h2 className="font-display text-3xl text-brand-ink sm:text-4xl">Poznaj nasze aktualne propozycje</h2>
             <p className="text-sm leading-relaxed text-brand-ink/70">
-              Odkryj zajecia w pracowni, wyjazdowe programy oraz sezonowe wydarzenia, ktore mozesz zarezerwowac juz dzis.
+              Odkryj zajęcia w pracowni, wyjazdowe programy oraz sezonowe wydarzenia, które możesz zarezerwować już dziś.
             </p>
           </div>
 

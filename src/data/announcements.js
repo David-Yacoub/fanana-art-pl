@@ -25,7 +25,7 @@ export const announcements = [
   },
   {
     id: 'womens-day',
-    type: 'info',
+    type: 'offer',
     title: 'Kreatywne spotkanie na Dzień Kobiet',
     description:
       'Zaproś co najmniej trzy kobiety (max. 10) ze swojego zespołu lub rodziny na kreatywne spotkanie w naszej pracowni. To wyjątkowy czas, by wspólnie odpocząć, porozmawiać i stworzyć coś pięknego.',
@@ -37,7 +37,7 @@ export const announcements = [
   },
   {
     id: 'gift-voucher',
-    type: 'info',
+    type: 'offer',
     title: 'Podaruj kreatywny voucher',
     description:
       'Podaruj komuś wyjątkowy prezent – voucher na warsztaty decoupage, który można wykorzystać podczas zajęć grupowych w naszej pracowni (w zgłoszeniu wystarczy podać numer vouchera) lub – po wcześniejszym uzgodnieniu – na warsztaty indywidualne. Jeśli chcesz otrzymać voucher w formie papierowej, skontaktuj się z nami – wyślemy go na Twój adres domowy na koszt Fanana-Art.',
