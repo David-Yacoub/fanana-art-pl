@@ -64,20 +64,19 @@ const TopNav = () => {
           </div>
         </div>
 
-        <div className="flex flex-wrap items-center justify-between gap-3 border-t border-brand-forest/10 px-4 py-3 md:hidden">
-          <div className="flex flex-wrap gap-3">
-            {navItems.map((item) => (
-              <a
-                key={item.label}
-                href={item.href}
-                target={item.external ? '_blank' : undefined}
-                rel={item.external ? 'noreferrer' : undefined}
-                className="rounded-full border border-brand-forest/15 px-3 py-1.5 text-xs font-semibold uppercase tracking-wide text-brand-forest transition hover:bg-brand-forest hover:text-white"
-              >
-                {item.label}
-              </a>
-            ))}
-          </div>        </div>
+        <div className="flex flex-wrap items-center gap-3 border-t border-brand-forest/10 px-4 py-3 md:hidden">
+          {navItems.map((item) => (
+            <a
+              key={item.label}
+              href={item.href}
+              target={item.external ? '_blank' : undefined}
+              rel={item.external ? 'noreferrer' : undefined}
+              className="rounded-full border border-brand-forest/15 px-3 py-1.5 text-xs font-semibold uppercase tracking-wide text-brand-forest transition hover:bg-brand-forest hover:text-white"
+            >
+              {item.label}
+            </a>
+          ))}
+        </div>
       </div>
     </nav>
   );
