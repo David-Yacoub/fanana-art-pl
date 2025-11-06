@@ -48,13 +48,7 @@ const TopNav = () => {
       </div>
 
       <div className="bg-white/90 backdrop-blur">
-        <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-10 lg:px-12">
-          <a
-            href="#hero"
-            className="flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.4em] text-brand-forest"
-          >
-            Fanana-Art
-          </a>
+        <div className="mx-auto flex max-w-6xl items-center justify-center px-4 py-3 sm:px-10 lg:px-12">
           <div className="hidden items-center gap-6 md:flex">
             {navItems.map((item) => (
               <a
@@ -68,7 +62,6 @@ const TopNav = () => {
               </a>
             ))}
           </div>
-          <div className="hidden md:block" aria-hidden="true" />
         </div>
 
         <div className="flex flex-wrap items-center justify-between gap-3 border-t border-brand-forest/10 px-4 py-3 md:hidden">
