@@ -27,7 +27,7 @@ const toIsoFromDateTime = (date, time) => {
   return parsed.toISOString();
 };
 
-const WorkshopCard = ({ workshop, onInterested: _onInterested }) => {
+const WorkshopCard = ({ workshop }) => {
   const [isDescriptionExpanded, setIsDescriptionExpanded] = useState(false);
   const upcomingSlots = Array.isArray(workshop.dateTimes) ? workshop.dateTimes : [];
 

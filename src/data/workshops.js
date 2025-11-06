@@ -1,6 +1,4 @@
-﻿export const workshopTypes = ['Decoupage', 'Mixed media', 'Cykl sezonowy', 'Rodzinne', 'Na zamówienie'];
-
-export const workshops = [
+﻿export const workshops = [
   {
     id: 'earrings-workshop',
     title: 'Warsztaty z tworzenia kolczyków',

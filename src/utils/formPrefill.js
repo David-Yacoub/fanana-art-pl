@@ -31,27 +31,6 @@ const formatPlTime = (date) => {
   return timeFormatter.format(date);
 };
 
-export const formatPlDateTime = (date) => {
-  const datePart = formatPlDate(date);
-  const timePart = formatPlTime(date);
-
-  if (!datePart && !timePart) {
-    return '';
-  }
-
-  if (!timePart) {
-    return datePart;
-  }
-
-  if (!datePart) {
-    return timePart;
-  }
-
-  return `${datePart} ${timePart}`;
-};
-
-export const encode = (value) => encodeURIComponent(value ?? '');
-
 export const buildBookingUrl = ({ title, dateIso }) => {
   if (!title || !dateIso) {
     return '';

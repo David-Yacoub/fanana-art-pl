@@ -1,27 +1,7 @@
 import { useMemo, useState } from 'react';
 import { NotebookPen } from 'lucide-react';
 import WorkshopCard from '../components/WorkshopCard.jsx';
-import { workshopTypes, workshops } from '../data/workshops.js';
-import { format } from '../utils/date.js';
-
-const priceOptions = [
-  { label: 'Wszystkie przedziały cenowe', value: 'All' },
-  { label: 'Do 50 zł', value: 'under-50' },
-  { label: '50–70 zł', value: '50-70' },
-  { label: 'Powyżej 70 zł', value: 'above-70' }
-];
-
-const difficultyOptions = ['Początkujący', 'Średnio zaawansowany', 'Zaawansowany'];
-
-const derivedDates = workshops
-  .flatMap((workshop) => workshop.dateTimes.map((slot) => slot.date))
-  .filter((value, index, array) => array.indexOf(value) === index)
-  .sort();
-
-const dateOptions = derivedDates.map((isoDate) => ({
-  value: isoDate,
-  label: format(isoDate)
-}));
+import { workshops } from '../data/workshops.js';
 
 const matchesPrice = (workshop, filter) => {
   if (filter === 'All') return true;
@@ -32,12 +12,12 @@ const matchesPrice = (workshop, filter) => {
 };
 
 const Workshops = ({ onInterested }) => {
-  const [filters, setFilters] = useState({
+  const [filters] = useState(() => ({
     type: 'All',
     difficulty: 'All',
     date: 'All',
     price: 'All'
-  });
+  }));
 
   const filteredWorkshops = useMemo(
     () =>
