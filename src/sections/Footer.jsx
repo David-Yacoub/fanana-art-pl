@@ -19,8 +19,9 @@ const Footer = () => (
         <div>
           <p className="text-xs uppercase tracking-[0.3em] text-white/50">Godziny pracowni</p>
           <ul className="mt-3 space-y-1 text-sm text-white/75">
-            <li>Czwartek – sobota: 10:00–19:00</li>
-            <li>Niedziela: 11:00–17:00</li>
+          
+            <li></li>
+            <li></li>
             <li>Zajęcia indywidualne na życzenie</li>
           </ul>
         </div>

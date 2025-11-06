@@ -35,7 +35,10 @@ const Hero = ({ onCtaClick }) => (
     <div className="absolute inset-y-0 -left-24 hidden w-64 rotate-12 bg-white/20 blur-3xl sm:block" />
     <div className="absolute inset-y-0 -right-32 hidden w-72 -rotate-12 bg-white/20 blur-3xl lg:block" />
 
-    <div className="relative mx-auto flex min-h-[70vh] max-w-6xl flex-col justify-center gap-10 px-6 py-24 sm:px-10 lg:px-12">
+<div className="relative mx-auto flex min-h-[70vh] max-w-6xl flex-col justify-center gap-10 px-6 py-24 sm:px-10 lg:px-12">
+      <div className="mx-auto w-full max-w-xl rounded-full border border-brand-forest/20 bg-white/90 px-6 py-3 text-center text-xs font-semibold uppercase tracking-[0.35em] text-brand-forest shadow-md">
+        Wszystkie zdjecia prezentuja nasze prace
+      </div>
       <div className="flex items-center gap-3 text-sm font-medium uppercase tracking-[0.3em] text-brand-forest/70">
         <Sparkles className="h-5 w-5" />
         Warsztaty Fanana-Art

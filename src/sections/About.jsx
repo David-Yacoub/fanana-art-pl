@@ -3,18 +3,18 @@
 const pillars = [
   {
     icon: Feather,
-    title: 'Przemyślane techniki',
-    copy: 'Pokazujemy, jak układać warstwy, postarzac wykończenia i dodawać autorskie detale.'
+    title: 'Slogan pracowni',
+    copy: 'każda praca jest dziełem sztuki, tworzoną z pasją i sercem.'
   },
   {
     icon: Star,
-    title: 'Starannie dobrane materiały',
-    copy: 'Korzystamy z europejskich papierów premium, ręcznie tworzonych szablonów i profesjonalnych mediów.'
+    title: 'Oferujemy',
+    copy: 'miłą atmosferę, parking za darmo, kawę, herbatę i ciastko dla każdego uczestnika.'
   },
   {
     icon: Heart,
-    title: 'Twórcza społeczność',
-    copy: 'Pracujemy w ciepłej atmosferze, gdzie dzielenie się pomysłami jest tak ważne jak efekt końcowy.'
+    title: 'przysłowie',
+    copy: 'Kreatywność to nie pasja, to sposób, w jaki patrzymy na świat.'
   }
 ];
 
@@ -25,7 +25,7 @@ const About = () => (
         <div className="space-y-6">
           <p className="text-sm uppercase tracking-[0.4em] text-brand-forest">O Fanana-Art</p>
           <h2 className="font-display text-3xl text-brand-ink sm:text-4xl">
-            Fananah – artystka, mentorka, opowiadaczka historii
+            Ania – artystka z pasją, mentorka z sercem
           </h2>
           <p className="text-sm leading-relaxed text-brand-ink/75">
             Gdy pewnego razu, przechodząc przez rynek w Wiśle, Ania zatrzymała się przy stoisku z decoupage,
@@ -55,15 +55,15 @@ const About = () => (
         <div className="relative">
           <div className="relative overflow-hidden rounded-[2.5rem] border border-brand-ink/10 shadow-lg">
             <img
-              src="https://images.unsplash.com/photo-1523475472560-d2df97ec485c?auto=format&fit=crop&w=900&q=60"
+              src="./images/group_image.jpg"
               alt="Instruktorka przygotowująca materiały do warsztatów decoupage"
               className="h-full w-full object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-brand-forest/10" />
           </div>
           <div className="absolute -bottom-8 -left-6 rounded-3xl border border-brand-forest/20 bg-white/90 px-6 py-4 shadow-lg">
-            <p className="text-xs uppercase tracking-[0.3em] text-brand-forest/60">Od 2014 roku</p>
-            <p className="mt-1 font-display text-xl text-brand-forest">Warsztaty w roznych krajach</p>
+            <p className="text-xs uppercase tracking-[0.3em] text-brand-forest/60">Od 2010 roku</p>
+            <p className="mt-1 font-display text-xl text-brand-forest">Zainspirowana techniką decoupage</p>
           </div>
         </div>
       </div>
