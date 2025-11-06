@@ -1,69 +1,63 @@
 ﻿export const galleryItems = [
   {
     id: "gallery-love-beyond-words",
-    title: "Tabliczka \"Miłość bez słów\"",
-    image: "/images/gallery-love-beyond-words.jpg",
+    title: "Tabliczka \"Milosc bez slow\"",
+    image: "/images/gallery_love_beyond_words.jpg",
     categories: ["Dzieci"]
   },
   {
     id: "gallery-live-every-moment",
-    title: "Tabliczka \"Żyj każdą chwilą\"",
-    image: "/images/gallery-live-every-moment.jpg",
+    title: "Tabliczka \"Zyj kazda chwila\"",
+    image: "/images/gallery_live_every_moment.jpg",
     categories: ["Dzieci"]
   },
   {
     id: "gallery-journey-quote",
-    title: "Tabliczka \"Tu zaczyna się podróż\"",
-    image: "/images/gallery-journey-quote.jpg",
+    title: "Tabliczka \"Tu zaczyna sie podroz\"",
+    image: "/images/gallery_journey_quote.jpg",
     categories: ["Dzieci"]
   },
   {
-    id: "gallery-marble-box",
-    title: "Pudełko na pamiątki Ocean Marble",
-    image: "/images/gallery-marble-box.jpg",
-    categories: ["Pudełka"]
-  },
-  {
-    id: "gallery-lavender-box",
-    title: "Lawendowe pudełko na drobiazgi",
-    image: "/images/gallery-lavender-box.jpg",
-    categories: ["Pudełka"]
+    id: "gallery-lavendar-box",
+    title: "Lawendowe pudelko na drobiazgi",
+    image: "/images/gallery_lavendar_box.jpg",
+    categories: ["Pudelka"]
   },
   {
     id: "gallery-floral-box",
-    title: "Kwiatowe pudełko dekoracyjne",
-    image: "/images/gallery-floral-box.jpg",
-    categories: ["Pudełka"]
+    title: "Kwiatowe pudelko dekoracyjne",
+    image: "/images/gallery_floral_box.jpg",
+    categories: ["Pudelka"]
+  },
+  {
+    id: "gallery-tea-box",
+    title: "Pudelko na herbate z motywem imbrykow",
+    image: "/images/tea_box_workshop.jpg",
+    categories: ["Pudelka"]
   },
   {
     id: "gallery-rose-clock",
-    title: "Zegar z różanym ogrodem",
-    image: "/images/gallery-rose-clock.jpg",
+    title: "Zegar z rozanym ogrodem",
+    image: "/images/gallery_rose_clock.jpg",
+    categories: ["Dzieci"]
+  },
+  {
+    id: "gallery-flower-clock",
+    title: "Kwiatowy zegar scienny",
+    image: "/images/gallery_flower_clock.jpg",
     categories: ["Dzieci"]
   },
   {
     id: "gallery-pastel-clock",
     title: "Pastelowy zegar w kwiaty",
-    image: "/images/gallery-pastel-clock.jpg",
+    image: "/images/gallery_pastel_clock.jpg",
     categories: ["Dzieci"]
-  },
-  {
-    id: "gallery-golden-clock",
-    title: "Złoty zegar kwiatowy",
-    image: "/images/Galeria7e.png",
-    categories: ["Dzieci"]
-  },
-  {
-    id: "gallery-teapot-box",
-    title: "Pudełko z motywem imbryków",
-    image: "/images/gallery-teapot-box.jpg",
-    categories: ["Pudełka"]
   },
   {
     id: "gallery-candle-holder",
-    title: "Świecznik z motywem lawendy",
+    title: "Swiecznik z motywem lawendy",
     image: "/images/picture_candle_holder_regular_workshop.jpg",
-    categories: ["Świeczniki"]
+    categories: ["Swieczniki"]
   },
   {
     id: "gallery-earrings",

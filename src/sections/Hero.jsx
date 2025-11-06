@@ -26,7 +26,7 @@ const Hero = ({ onCtaClick }) => (
     <div
       className="absolute inset-0 opacity-20"
       style={{
-        backgroundImage: "url('/images/gallery-lavender-box.jpg')",
+        backgroundImage: "url('/images/gallery_lavendar_box.jpg')",
         backgroundSize: 'cover',
         backgroundPosition: 'center'
       }}

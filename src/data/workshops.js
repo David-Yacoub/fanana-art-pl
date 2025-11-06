@@ -51,11 +51,12 @@ export const workshops = [
     id: 'family-collage-workshop',
     title: 'Rodzinny warsztat kolażu',
     description:
-      'Swobodne, rodzinne spotkanie z tworzeniem tablic wspomnień za pomocą decoupage i opowieści. Doskonałe dla dużych i małych artystów.',
-    duration: '90 minut',
-    price: 35,
+      'Zapraszamy na kreatywne warsztaty, podczas których ozdobisz drewniany wieszak techniką decoupage! To doskonała okazja, by połączyć sztukę z praktycznym zastosowaniem i stworzyć unikalny element dekoracyjny do swojego domu. Każdy uczestnik wykonany własny wieszak - idealny do przedpokoju, sypialni lub jako oryginalny prezent dla bliskiej osoby.',
+    duration: '2 godziny',
+    price: 65,
+    priceDisplay: '65 zł / 2 wieszaki',
     difficulty: 'Początkujący',
-    type: 'Rodzinne',
+    type: 'Decoupage',
     highlight: 'Dla całej rodziny',
     image: '/images/workshop_cloth_holder.jpg',
     dateTimes: [
@@ -76,7 +77,7 @@ export const workshops = [
       '20 zł – decoupage na zawieszkach drewnianych'
     ],
     difficulty: 'Początkujący',
-    type: 'Rodzinne',
+    type: 'Decoupage',
     highlight: 'Świąteczna edycja',
     image: '/images/kids_christmas_workshop.jpg',
     ctaLabel: 'Zarezerwuj termin',
@@ -127,7 +128,7 @@ export const workshops = [
       '80 zł – pudełko z 6 przegródkami'
     ],
     difficulty: 'Początkujący',
-    type: 'Rodzinne',
+    type: 'Decoupage',
     highlight: 'Zarezerwuj termin',
     image: '/images/tea_box_workshop.jpg',
     ctaLabel: 'Zarezerwuj termin',
