@@ -1,15 +1,7 @@
-﻿import { useMemo, useState } from 'react';
-import { CalendarDays, Clock3, Sparkles, Wallet } from 'lucide-react';
-
-const BOOKING_CONFIG = {
-  formBaseUrl:
-    'https://docs.google.com/forms/d/e/1FAIpQLSfnOY2G0RlzpVuwQD9f5NMZnt6WJUMKkFHqTVcse1M4rjZAbQ/viewform',
-  entryIds: {
-    workshop: 'entry.245361249',
-    date: 'entry.372576101',
-    time: 'entry.1825110953'
-  }
-};
+import { useMemo, useState } from 'react';
+import { CalendarDays, Clock3, Sparkles, Users, Wallet } from 'lucide-react';
+import { scheduleWorkshops } from '../data/scheduleWorkshops';
+import { buildBookingFormUrl, parseWorkshopDateTime } from '../utils/bookingForm';
 
 const longDateFormatter = new Intl.DateTimeFormat('pl-PL', {
   weekday: 'long',
@@ -18,60 +10,13 @@ const longDateFormatter = new Intl.DateTimeFormat('pl-PL', {
   day: 'numeric'
 });
 
-const parseDateTime = (date, time) => {
-  if (!date || !time) return null;
-  const parsed = new Date(`${date} ${time}`);
-  return Number.isNaN(parsed.valueOf()) ? null : parsed;
-};
-
-const buildBookingFormUrl = ({ title, date, time }) => {
-  if (!title || !date || !time) return BOOKING_CONFIG.formBaseUrl;
-
-  const params = new URLSearchParams({
-    usp: 'pp_url',
-    [BOOKING_CONFIG.entryIds.workshop]: title,
-    [BOOKING_CONFIG.entryIds.date]: date,
-    [BOOKING_CONFIG.entryIds.time]: time
-  });
-
-  return `${BOOKING_CONFIG.formBaseUrl}?${params.toString()}`;
-};
-
-const scheduleWorkshops = [
-  {
-    id: 'earrings',
-    title: 'Warsztaty z tworzenia kolczyków',
-    description:
-      'Stwórz trzy pary drewnianych kolczyków dopasowanych do Twojego stylu. Poznasz podstawy decoupage, dobierzesz wzory i wykończenia, a gotowe ozdoby zabierzesz ze sobą.',
-    duration: '2 godziny',
-    priceDisplay: '65 zł / 3 pary kolczyków',
-    formDate: '2025-11-21',
-    formTime: '17:30',
-    timeRange: '17:30–19:30',
-    highlight: 'Dla początkujących',
-    image: '/images/Earings_workshop.jpg'
-  },
-  {
-    id: 'candle',
-    title: 'Warsztaty z tworzenia świeczników',
-    description:
-      'Wykonaj własny świecznik, który rozświetli długie wieczory. Na spokojnie przejdziesz każdy etap – od przygotowania powierzchni po końcowe zdobienia i zabezpieczenie.',
-    duration: '2 godziny',
-    priceDisplay: '50 zł / 1 duży świecznik',
-    formDate: '2025-11-28',
-    formTime: '17:30',
-    timeRange: '17:30–19:30',
-    highlight: 'Dla początkujących',
-    image: '/images/candle_workshop.jpg'
-  }
-];
 
 const Schedule = () => {
   const [showCalendar, setShowCalendar] = useState(false);
   const upcomingSessions = useMemo(() => {
     const sessions = scheduleWorkshops
       .map((session) => {
-        const start = parseDateTime(session.formDate, session.formTime);
+        const start = parseWorkshopDateTime(session.formDate, session.formTime);
         return {
           ...session,
           start,
@@ -137,7 +82,21 @@ const Schedule = () => {
           {upcomingSessions.length > 0 ? (
             <div className="grid gap-6 md:grid-cols-2">
               {upcomingSessions.map(
-                ({ id, highlight, title, description, duration, priceDisplay, timeRange, formDate, formTime, longDate, image }) => {
+                ({
+                  id,
+                  highlight,
+                  title,
+                  description,
+                  duration,
+                  priceDisplay,
+                  timeRange,
+                  formDate,
+                  formTime,
+                  longDate,
+                  image,
+                  availableSpots,
+                  capacity
+                }) => {
                   const bookingUrl = buildBookingFormUrl({
                     title,
                     date: formDate,
@@ -202,6 +161,17 @@ const Schedule = () => {
                               <dd>{priceDisplay}</dd>
                             </div>
                           </div>
+                          {typeof availableSpots === 'number' && typeof capacity === 'number' && (
+                            <div className="flex items-center gap-2">
+                              <Users className="h-4 w-4 text-brand-forest" />
+                              <div>
+                                <dt className="sr-only">Dostepnosc miejsc</dt>
+                                <dd>
+                                  {availableSpots}/{capacity} miejsc
+                                </dd>
+                              </div>
+                            </div>
+                          )}
                         </dl>
 
                         <a

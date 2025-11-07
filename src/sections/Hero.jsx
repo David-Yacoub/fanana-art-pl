@@ -1,4 +1,6 @@
-import { Palette, Paintbrush2, Sparkles } from 'lucide-react';
+import { CalendarDays, Palette, Paintbrush2, Sparkles } from 'lucide-react';
+import { scheduleWorkshops } from '../data/scheduleWorkshops';
+import { buildBookingFormUrl, parseWorkshopDateTime } from '../utils/bookingForm';
 
 const featureHighlights = [
   {
@@ -21,6 +23,42 @@ const featureHighlights = [
   }
 ];
 
+const heroDateFormatter = new Intl.DateTimeFormat('pl-PL', {
+  weekday: 'long',
+  month: 'long',
+  day: 'numeric'
+});
+
+const heroTimeFormatter = new Intl.DateTimeFormat('pl-PL', {
+  hour: '2-digit',
+  minute: '2-digit',
+  hour12: false
+});
+
+const nearestWorkshop = (() => {
+  const upcoming = scheduleWorkshops
+    .map((session) => {
+      const start = parseWorkshopDateTime(session.formDate, session.formTime);
+      if (!start) return null;
+
+      return {
+        ...session,
+        start,
+        longDate: heroDateFormatter.format(start),
+        shortTime: heroTimeFormatter.format(start),
+        bookingUrl: buildBookingFormUrl({
+          title: session.title,
+          date: session.formDate,
+          time: session.formTime
+        })
+      };
+    })
+    .filter(Boolean)
+    .sort((a, b) => a.start - b.start);
+
+  return upcoming[0] ?? null;
+})();
+
 const Hero = ({ onCtaClick }) => (
   <section className="relative overflow-hidden bg-brand-cream">
     <div
@@ -41,14 +79,17 @@ const Hero = ({ onCtaClick }) => (
         Warsztaty Fanana-Art
       </div>
 
-      <div className="max-w-3xl space-y-6 rounded-3xl bg-white/85 p-6 shadow-lg backdrop-blur">
-        <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+      <div className="flex flex-col gap-6 lg:flex-row lg:items-start">
+        <div className="max-w-3xl flex-1 space-y-6 rounded-3xl bg-white/85 p-6 shadow-lg backdrop-blur">
+          <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
           <h1 className="font-display text-4xl leading-tight text-brand-ink sm:text-5xl lg:text-6xl">
             Pracownia Fanana-Art
           </h1>
-          <div className="inline-flex items-center gap-2 rounded-full border border-brand-forest/20 bg-white/90 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.35em] text-brand-forest shadow-sm">
-            <Sparkles className="h-4 w-4" />
-            Wszystkie zdjecia to nasze prace
+          <div className="flex flex-col gap-3 sm:max-w-xs">
+            <div className="inline-flex items-center gap-2 rounded-full border border-brand-forest/20 bg-white/90 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.35em] text-brand-forest shadow-sm">
+              <Sparkles className="h-4 w-4" />
+              Wszystkie zdjecia to nasze prace
+            </div>
           </div>
         </div>
         <p className="max-w-xl text-lg leading-relaxed text-brand-ink/80 sm:text-xl">
@@ -76,6 +117,52 @@ const Hero = ({ onCtaClick }) => (
             Aktualności
           </a>
         </div>
+        </div>
+        {nearestWorkshop && (
+          <a
+            href={nearestWorkshop.bookingUrl}
+            target="_blank"
+            rel="noreferrer"
+            className="group w-full max-w-md rounded-3xl border border-brand-forest/15 bg-white/90 p-6 text-left shadow-lg transition hover:-translate-y-0.5 hover:shadow-xl"
+          >
+            <div className="text-xs font-semibold uppercase tracking-[0.4em] text-brand-forest/70">
+              Najblizsze warsztaty
+            </div>
+            <div className="mt-4 flex items-center gap-3">
+              {nearestWorkshop.image && (
+                <div className="h-14 w-14 overflow-hidden rounded-2xl border border-brand-forest/20 shadow-sm">
+                  <img
+                    src={nearestWorkshop.image}
+                    alt={nearestWorkshop.title}
+                    className="h-full w-full object-cover"
+                    loading="lazy"
+                  />
+                </div>
+              )}
+              <p className="font-display text-xl text-brand-ink group-hover:text-brand-forest">
+                {nearestWorkshop.title}
+              </p>
+            </div>
+            <div className="mt-4 flex flex-wrap items-center gap-2 text-sm text-brand-ink/80">
+              <span className="inline-flex items-center gap-1">
+                <CalendarDays className="h-4 w-4 text-brand-forest" />
+                {nearestWorkshop.longDate}
+              </span>
+              <span>&middot;</span>
+              <span>{nearestWorkshop.shortTime}</span>
+            </div>
+            <div className="mt-5 inline-flex items-center gap-3 text-sm font-semibold text-brand-forest">
+              <span>Dostepne miejsca</span>
+              <span className="rounded-full bg-brand-forest/10 px-3 py-1 text-brand-forest">
+                {nearestWorkshop.availableSpots}/{nearestWorkshop.capacity}
+              </span>
+            </div>
+            <span className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-brand-forest">
+              Przejdz do rezerwacji
+              <span aria-hidden="true">→</span>
+            </span>
+          </a>
+        )}
       </div>
 
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
