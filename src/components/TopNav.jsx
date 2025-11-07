@@ -18,7 +18,7 @@ const TopNav = () => {
       : true;
 
   return (
-    <nav className="sticky top-0 z-50 bg-white shadow-sm">
+    <nav className="z-50 bg-white shadow-sm md:sticky md:top-0">
       <div className="border-b border-brand-ink/10 bg-white">
         <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-3 px-4 py-1.5 text-[11px] font-semibold tracking-[0.15em] text-brand-forest sm:px-10 sm:py-2 sm:text-xs lg:px-12">
           <div className="flex items-center gap-2">
