@@ -71,10 +71,9 @@
       'Świąteczne warsztaty dla dzieci to wyjątkowa okazja, by stworzyć własne, piękne dekoracje świąteczne. Zajęcia pobudzą kreatywność, wprowadzą uczestników w nastrój świąt i pozwolą im udekorować domy własnoręcznie wykonanymi dziełami. Max ilość dzieci w grupie do 15 osób)',
     duration: '45-60 minut',
     price: 25,
-    priceDisplay: '20-25 zł',
+    priceDisplay: '25 zł',
     pricingDetails: [
-      '25 zł / krążek brzozy lub świecznik',
-      '20 zł / zawieszka drewniana'
+      'krążek brzozy / świecznik / zawieszka drewniana'
     ],
     difficulty: 'Początkujący',
     type: 'Decoupage',
