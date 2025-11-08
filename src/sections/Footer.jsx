@@ -1,9 +1,9 @@
-import { Facebook, Instagram, Youtube } from 'lucide-react';
+import { Facebook, Instagram, BookOpen } from 'lucide-react';
 
 const socials = [
   { id: 'instagram', label: 'Instagram @fanana.art', icon: Instagram, link: 'https://www.instagram.com/fanana_art.workshop/' },
-  { id: 'facebook', label: 'Fanana-Art na Facebooku', icon: Facebook, link: 'https://facebook.com' },
-  { id: 'youtube', label: 'Kanał Creative Sessions', icon: Youtube, link: 'https://youtube.com' }
+  { id: 'facebook', label: 'Fanana-Art na Facebooku', icon: Facebook, link: 'https://www.facebook.com/profile.php?id=61583522277270' },
+  { id: 'blog', label: 'Nasz Blog', icon: BookOpen, link: 'https://ania-tdb.blogspot.com/' }
 ];
 
 const Footer = () => (
