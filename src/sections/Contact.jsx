@@ -1,6 +1,8 @@
 import { forwardRef, useEffect, useMemo, useState } from 'react';
 import { Mail, MapPin, MessageCircle, Phone, Send } from 'lucide-react';
 
+const FORM_ENDPOINT = 'https://formspree.io/f/xnnlaplq';
+
 const initialFormState = {
   name: '',
   email: '',
@@ -12,6 +14,7 @@ const initialFormState = {
 const Contact = forwardRef(({ workshops, selectedWorkshop }, ref) => {
   const [form, setForm] = useState(initialFormState);
   const [status, setStatus] = useState('idle');
+  const [feedbackMessage, setFeedbackMessage] = useState('');
 
   const workshopOptions = useMemo(
     () =>
@@ -56,11 +59,36 @@ const Contact = forwardRef(({ workshops, selectedWorkshop }, ref) => {
     setForm((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    setStatus('success');
-    setForm(initialFormState);
+    if (status === 'submitting') return;
+    setStatus('submitting');
+    setFeedbackMessage('');
+
+    try {
+      const response = await fetch(FORM_ENDPOINT, {
+        method: 'POST',
+        headers: {
+          Accept: 'application/json',
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(form)
+      });
+
+      if (!response.ok) {
+        throw new Error('Form submission failed');
+      }
+
+      setStatus('success');
+      setFeedbackMessage('Dziękujemy! Wiadomość właśnie do nas dotarła – skontaktujemy się wkrótce.');
+      setForm(initialFormState);
+    } catch (error) {
+      setStatus('error');
+      setFeedbackMessage('Ups! Coś poszło nie tak. Spróbuj ponownie lub skontaktuj się z nami bezpośrednio.');
+    }
   };
+
+  const isSubmitting = status === 'submitting';
 
   return (
     <section id="contact" ref={ref} className="mt-24 px-6 sm:px-10 lg:px-12">
@@ -178,15 +206,21 @@ const Contact = forwardRef(({ workshops, selectedWorkshop }, ref) => {
 
             <button
               type="submit"
-              className="inline-flex items-center gap-2 rounded-full bg-brand-forest px-6 py-3 text-sm font-semibold uppercase tracking-wide text-white shadow-lg transition hover:bg-brand-forest/90"
+              disabled={isSubmitting}
+              className="inline-flex items-center gap-2 rounded-full bg-brand-forest px-6 py-3 text-sm font-semibold uppercase tracking-wide text-white shadow-lg transition hover:bg-brand-forest/90 disabled:cursor-not-allowed disabled:opacity-60"
             >
               <Send className="h-4 w-4" />
-              Wyślij wiadomość
+              {isSubmitting ? 'Wysyłanie...' : 'Wyślij wiadomość'}
             </button>
 
             {status === 'success' && (
-              <p className="text-sm font-medium text-emerald-700">
-                Dziękujemy! Wiadomość właśnie do nas dotarła – skontaktujemy się wkrótce.
+              <p className="text-sm font-medium text-emerald-700" role="status">
+                {feedbackMessage}
+              </p>
+            )}
+            {status === 'error' && (
+              <p className="text-sm font-medium text-rose-700" role="alert">
+                {feedbackMessage}
               </p>
             )}
           </form>
