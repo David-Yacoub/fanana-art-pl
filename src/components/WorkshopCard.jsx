@@ -27,7 +27,7 @@ const toIsoFromDateTime = (date, time) => {
   return parsed.toISOString();
 };
 
-const WorkshopCard = ({ workshop }) => {
+const WorkshopCard = ({ workshop, onInterested }) => {
   const [isDescriptionExpanded, setIsDescriptionExpanded] = useState(false);
   const upcomingSlots = Array.isArray(workshop.dateTimes) ? workshop.dateTimes : [];
 
@@ -47,11 +47,11 @@ const WorkshopCard = ({ workshop }) => {
       title: workshop.title,
       dateIso
     });
-  const isDisabled = !bookingUrl;
+  const hasContactCta = typeof onInterested === 'function';
   const priceDisplay =
     workshop.priceDisplay ??
     (typeof workshop.price === 'number' ? `${workshop.price} PLN` : 'Do ustalenia');
-  const ctaLabel = workshop.ctaLabel ?? 'Zarezerwuj miejsce';
+  const ctaLabel = hasContactCta ? 'Skontaktuj się z nami' : workshop.ctaLabel ?? 'Zarezerwuj miejsce';
   const ctaDisabledLabel = workshop.ctaDisabledLabel ?? ctaLabel;
 
   const normalizedDescription = (workshop.description ?? '').trim();
@@ -70,6 +70,14 @@ const WorkshopCard = ({ workshop }) => {
     shouldTruncateDescription && !isDescriptionExpanded
       ? truncatedDescription
       : normalizedDescription;
+
+  const isDisabled = !hasContactCta && !bookingUrl;
+
+  const handleContactClick = () => {
+    if (hasContactCta) {
+      onInterested(workshop);
+    }
+  };
 
   return (
     <article className="group relative flex h-full flex-col overflow-hidden rounded-3xl border border-brand-ink/10 bg-white/80 shadow-sm backdrop-blur transition hover:-translate-y-1 hover:shadow-xl">
@@ -179,6 +187,15 @@ const WorkshopCard = ({ workshop }) => {
             >
               {ctaDisabledLabel}
             </span>
+          ) : hasContactCta ? (
+            <button
+              type="button"
+              onClick={handleContactClick}
+              className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-brand-forest px-5 py-3 text-sm font-semibold uppercase tracking-wide text-white shadow transition hover:bg-brand-forest/90"
+              aria-label={`${ctaLabel} - ${workshop.title}`}
+            >
+              {ctaLabel}
+            </button>
           ) : (
             <a
               href={bookingUrl}

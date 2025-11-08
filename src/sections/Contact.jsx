@@ -22,8 +22,28 @@ const Contact = forwardRef(({ workshops, selectedWorkshop }, ref) => {
     [workshops]
   );
 
+  const mergedWorkshopOptions = useMemo(() => {
+    if (!selectedWorkshop?.id) {
+      return workshopOptions;
+    }
+
+    const alreadyListed = workshopOptions.some((option) => option.value === selectedWorkshop.id);
+    if (alreadyListed) {
+      return workshopOptions;
+    }
+
+    const fallbackLabel = selectedWorkshop.title ?? 'Wybrana oferta';
+    return [
+      {
+        value: selectedWorkshop.id,
+        label: fallbackLabel
+      },
+      ...workshopOptions
+    ];
+  }, [selectedWorkshop, workshopOptions]);
+
   useEffect(() => {
-    if (selectedWorkshop) {
+    if (selectedWorkshop?.id) {
       setForm((prev) => ({
         ...prev,
         preferredWorkshop: selectedWorkshop.id
@@ -135,7 +155,7 @@ const Contact = forwardRef(({ workshops, selectedWorkshop }, ref) => {
                 className="mt-2 w-full rounded-2xl border border-brand-ink/10 bg-white/90 px-4 py-3 text-sm text-brand-ink outline-none focus:border-brand-forest focus:ring-2 focus:ring-brand-forest/20"
               >
                 <option value="">Dopiero poznaję ofertę</option>
-                {workshopOptions.map((option) => (
+                {mergedWorkshopOptions.map((option) => (
                   <option key={option.value} value={option.value}>
                     {option.label}
                   </option>

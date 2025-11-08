@@ -17,7 +17,8 @@ const App = () => {
   const [selectedWorkshop, setSelectedWorkshop] = useState(null);
 
   const handleInterested = (workshop) => {
-    setSelectedWorkshop(workshop);
+    if (!workshop) return;
+    setSelectedWorkshop({ ...workshop });
     contactRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
   };
 
@@ -30,7 +31,7 @@ const App = () => {
       <TopNav />
       <Hero onCtaClick={handleHeroCta} />
       <Schedule />
-      <Announcements data={announcements} />
+      <Announcements data={announcements} onInterested={handleInterested} />
       <Workshops onInterested={handleInterested} />
       <About />
       <Gallery />

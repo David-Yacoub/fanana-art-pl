@@ -32,14 +32,24 @@ const buildDescriptionPreview = (text) => {
   };
 };
 
-const Announcements = ({ data }) => {
+const Announcements = ({ data, onInterested }) => {
   const [expandedAnnouncements, setExpandedAnnouncements] = useState([]);
   const sorted = [...data].sort((a, b) => (a.priority ?? 1) - (b.priority ?? 1));
+  const hasContactCTA = typeof onInterested === 'function';
 
   const toggleExpanded = (id) => {
     setExpandedAnnouncements((previous) =>
       previous.includes(id) ? previous.filter((entry) => entry !== id) : [...previous, id]
     );
+  };
+
+  const handleAnnouncementSelection = (announcement) => {
+    if (!hasContactCTA) return;
+    const selection = {
+      id: announcement.prefillWorkshopId ?? announcement.id,
+      title: announcement.prefillWorkshopTitle ?? announcement.title
+    };
+    onInterested(selection);
   };
 
   return (
@@ -120,13 +130,24 @@ const Announcements = ({ data }) => {
                     </div>
                     {announcement.ctaLabel && (
                       <div className="pt-2">
-                        <a
-                          href={announcement.ctaHref ?? '#contact'}
-                          className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-wide text-brand-forest transition hover:text-brand-forest/80"
-                        >
-                          {announcement.ctaLabel}
-                          <span aria-hidden="true">-&gt;</span>
-                        </a>
+                        {hasContactCTA ? (
+                          <button
+                            type="button"
+                            onClick={() => handleAnnouncementSelection(announcement)}
+                            className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-wide text-brand-forest transition hover:text-brand-forest/80"
+                          >
+                            {announcement.ctaLabel}
+                            <span aria-hidden="true">-&gt;</span>
+                          </button>
+                        ) : (
+                          <a
+                            href={announcement.ctaHref ?? '#contact'}
+                            className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-wide text-brand-forest transition hover:text-brand-forest/80"
+                          >
+                            {announcement.ctaLabel}
+                            <span aria-hidden="true">-&gt;</span>
+                          </a>
+                        )}
                       </div>
                     )}
                   </div>
@@ -141,4 +162,3 @@ const Announcements = ({ data }) => {
 };
 
 export default Announcements;
-
