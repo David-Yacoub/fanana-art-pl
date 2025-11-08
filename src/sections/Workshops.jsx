@@ -40,7 +40,7 @@ const Workshops = ({ onInterested }) => {
         <div className="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
           <div>
             <p className="text-sm uppercase tracking-[0.4em] text-brand-forest">Warsztaty w praktyce</p>
-            <h2 className="mt-2 font-display text-3xl text-brand-ink sm:text-4xl">Poznaj nasze warsztaty</h2>
+            <h2 className="mt-2 font-display text-4xl text-brand-ink sm:text-5xl">Poznaj nasze warsztaty</h2>
             <p className="mt-3 max-w-2xl text-sm leading-relaxed text-brand-ink/70">
               Każde spotkanie to demonstracje krok po kroku, ćwiczenia z instruktorem i starannie dobrane materiały.
               Zarezerwuj wcześniej, aby zagwarantować sobie idealny termin.

@@ -39,7 +39,7 @@ const Schedule = () => {
             Zaplanuj wcześniej
           </span>
           <div className="max-w-3xl space-y-3">
-            <h2 className="font-display text-3xl text-brand-ink sm:text-4xl">Harmonogram warsztatów i rezerwacje</h2>
+            <h2 className="font-display text-4xl text-brand-ink sm:text-5xl">Harmonogram warsztatów i rezerwacje</h2>
             <p className="text-sm leading-relaxed text-brand-ink/70">
               Zobacz nadchodzące spotkania, dodaj je do kalendarza i zarezerwuj termin dla siebie lub swojej grupy w kilka chwil.
             </p>
