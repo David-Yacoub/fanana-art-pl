@@ -44,7 +44,7 @@ export const announcements = [
     note: 'ważny przez 6 miesięcyf',
     ctaLabel: 'Kup voucher',
     ctaHref: '#contact',
-    image: '/images/announcement_voucher.jpg',
+    image: '/images/Voucher.jpg',
     priority: 3
   }
 ];

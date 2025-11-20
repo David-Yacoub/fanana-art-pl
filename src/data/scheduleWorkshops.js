@@ -26,7 +26,7 @@ export const scheduleWorkshops = [
     timeRange: '17:30-19:30',
     highlight: 'Dla początkujących',
     image: '/images/candle_workshop.jpg',
-    availableSpots: 8,
+    availableSpots: 7,
     capacity: 8
   }
 ];
