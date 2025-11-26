@@ -11,7 +11,7 @@
     timeRange: '17:30-19:30',
     highlight: 'Dla początkujących',
     image: '/images/candle_workshop.jpg',
-    availableSpots: 7,
+    availableSpots: 4,
     capacity: 8
   }
 ];
