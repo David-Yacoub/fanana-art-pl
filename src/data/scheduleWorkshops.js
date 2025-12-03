@@ -1,17 +1,17 @@
-﻿export const scheduleWorkshops = [
+export const scheduleWorkshops = [
   {
-    id: 'candle',
-    title: 'Warsztaty z tworzenia świeczników',
+    id: 'decoupage-box',
+    title: 'Warsztaty decoupage - swiateczne pudelka',
     description:
-      'Wykonaj własny świecznik, który rozświetli długie wieczory. Na spokojnie przejdziesz każdy etap — od przygotowania powierzchni po końcowe zdobienia i zabezpieczenie.',
+      'Przygotuj swiateczne pudelko technika decoupage; w cenie kawa i ciasto. Poznasz krok po kroku jak przygotowac i ozdobic pudelko idealne na prezent.',
     duration: '2 godziny',
-    priceDisplay: '50 zł / 1 duży świecznik',
-    formDate: '2025-11-28',
-    formTime: '17:30',
-    timeRange: '17:30-19:30',
-    highlight: 'Dla początkujących',
-    image: '/images/candle_workshop.jpg',
-    availableSpots: 4,
+    priceDisplay: '55 zl (kawa i ciasto w cenie)',
+    formDate: '2025-12-12',
+    formTime: '17:00',
+    timeRange: '17:00-19:00',
+    highlight: 'Warsztat kreatywny',
+    image: '/images/tea_box_workshop.jpg',
+    availableSpots: 8,
     capacity: 8
   }
 ];
