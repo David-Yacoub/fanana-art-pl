@@ -10,7 +10,7 @@ export const scheduleWorkshops = [
     formTime: '17:00',
     timeRange: '17:00-19:00',
     highlight: 'Warsztat kreatywny',
-    image: '/images/tea_box_workshop.jpg',
+    image: '/images/Box-Imag.jpg',
     availableSpots: 8,
     capacity: 8
   }

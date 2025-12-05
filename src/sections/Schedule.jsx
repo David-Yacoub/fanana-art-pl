@@ -109,14 +109,13 @@ const Schedule = () => {
                       className="group flex h-full flex-col overflow-hidden rounded-3xl border border-brand-ink/10 bg-white/90 shadow-sm transition hover:-translate-y-1 hover:shadow-lg"
                     >
                       {image && (
-                        <div className="relative h-48">
+                        <div className="relative aspect-[4/3] w-full overflow-hidden bg-white">
                           <img
                             src={image}
                             alt={title}
                             className="h-full w-full object-cover"
                             loading="lazy"
                           />
-                          <div className="absolute inset-0 bg-gradient-to-t from-brand-ink/40 via-transparent to-transparent" />
                         </div>
                       )}
 
